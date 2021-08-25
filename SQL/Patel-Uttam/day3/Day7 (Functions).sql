@@ -2,26 +2,18 @@ USE [Day7 (Function)]
 SELECT * FROM Employees
 sp_help Employees
 
-------- 
-
---SELECT * FROM Countries
-
---SELECT CountryID, 'Is for' ,CountryName AS 'Name' FROM Countries
-
---SELECT  FirstName FROM Employees
-
 
 /*
 
-Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
+Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters â€˜Aâ€™, â€˜Jâ€™ or â€˜Mâ€™. Give each column an appropriate label. Sort the results by the employeesâ€™ FirstName
 Write a query to display the FirstName and Salary for all employees. Format the salary to be 10 characters long, left-padded with the $ symbol. Label the column SALARY.
 Write a query to display the employees with their code, first name, last name and hire date who hired either on seventh day of any month or seventh month in any year.
-Write a query to display the length of first name for employees where last name contains character ‘c’ after 2nd position.
+Write a query to display the length of first name for employees where last name contains character â€˜câ€™ after 2nd position.
 Write a query to extract the last 4 character of PhoneNumber.
-Write a query to update the portion of the PhoneNumber in the employees table, within the phone number the substring ‘124’ will be replaced by ‘999’.
+Write a query to update the portion of the PhoneNumber in the employees table, within the phone number the substring â€˜124â€™ will be replaced by â€˜999â€™.
 Write a query to calculate the age in year.
 Write a query to get the distinct Mondays from HireDate in employees tables.
-Write a query to get the FirstName and HireDate from Employees table where HireDate between ‘1987-06-01’ and ‘1987-07-30’
+Write a query to get the FirstName and HireDate from Employees table where HireDate between â€˜1987-06-01â€™ and â€˜1987-07-30â€™
 Write a query to display the current date in the following format.(Sample output : 12:00 AM Sep 5, 2014)
 Write a query to get the FirstName, LastName who joined in the month of June.
 Write a query to get first name, hire date and experience of the employees.
@@ -30,7 +22,7 @@ Write a query to get first name of employees who joined in 1987.
 */
 
 
--- 1. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
+-- 1. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters â€˜Aâ€™, â€˜Jâ€™ or â€˜Mâ€™. Give each column an appropriate label. Sort the results by the employeesâ€™ FirstName
 
 SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
 
@@ -51,7 +43,7 @@ SELECT  EmployeeID  ,FirstName , LastName , HireDate AS 'Length of FirstName' FR
 
 
 
--- 4. Write a query to display the length of first name for employees where last name contains character ‘c’ after 2nd position.
+-- 4. Write a query to display the length of first name for employees where last name contains character â€˜câ€™ after 2nd position.
 
 SELECT FirstName , LastName , LEN(FirstName) AS 'Len of FirstName' FROM Employees WHERE SUBSTRING(LastName,3,LEN(LastName)-2) LIKE 'c%' 
 
@@ -67,7 +59,7 @@ SELECT PhoneNumber , RIGHT(PhoneNumber,4) AS 'last 4 character of PhoneNumber' F
 
 
 
--- 6. Write a query to update the portion of the PhoneNumber in the employees table, within the phone number the substring ‘124’ will be replaced by ‘999’.
+-- 6. Write a query to update the portion of the PhoneNumber in the employees table, within the phone number the substring â€˜124â€™ will be replaced by â€˜999â€™.
 
 
 UPDATE Employees SET PhoneNumber = REPLACE(PhoneNumber,124,999)
@@ -91,7 +83,7 @@ SELECT HireDate , DATENAME(DAY,HireDate) FROM Employees WHERE DATENAME(WEEKDAY,H
 
 
 
--- 9. Write a query to get the FirstName and HireDate from Employees table where HireDate between ‘1987-06-01’ and ‘1987-07-30’
+-- 9. Write a query to get the FirstName and HireDate from Employees table where HireDate between â€˜1987-06-01â€™ and â€˜1987-07-30â€™
 SELECT FirstName , HireDate FROM Employees WHERE HireDate BETWEEN '1987-06-01' AND '1987-07-30'
 
 
@@ -103,28 +95,28 @@ SELECT FORMAT(GETDATE(),'hh:mm tt MM dd , yyyy')
 
 
 
--- 11. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
+-- 11. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters â€˜Aâ€™, â€˜Jâ€™ or â€˜Mâ€™. Give each column an appropriate label. Sort the results by the employeesâ€™ FirstName
 
 SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
 
 
 
 
--- 12. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
+-- 12. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters â€˜Aâ€™, â€˜Jâ€™ or â€˜Mâ€™. Give each column an appropriate label. Sort the results by the employeesâ€™ FirstName
 
 SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
 
 
 
 
--- 13. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
+-- 13. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters â€˜Aâ€™, â€˜Jâ€™ or â€˜Mâ€™. Give each column an appropriate label. Sort the results by the employeesâ€™ FirstName
 
 SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
 
 
 
 
--- Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
+-- Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters â€˜Aâ€™, â€˜Jâ€™ or â€˜Mâ€™. Give each column an appropriate label. Sort the results by the employeesâ€™ FirstName
 
 SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
 
@@ -132,6 +124,6 @@ SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE 
 
 
 
--- Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
+-- Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters â€˜Aâ€™, â€˜Jâ€™ or â€˜Mâ€™. Give each column an appropriate label. Sort the results by the employeesâ€™ FirstName
 
 SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
