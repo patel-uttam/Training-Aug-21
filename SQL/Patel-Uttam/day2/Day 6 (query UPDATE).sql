@@ -76,8 +76,5 @@ UPDATE Employees SET Salary = Salary * 0.15 WHERE DepartmentID =90
 UPDATE Employees SET Salary = Salary * 0.10 WHERE DepartmentID =110 
 
 
-
 --Write a SQL statement to increase the minimum and maximum salary of PU_CLERK by 2000 as well as the salary for 
 --those employees by 20% and commission by 10% .
-
-UPDATE Employees SET Salary = (Salary + 2000) + (Salary * 0.20) , CommissionPct = CommissionPct * 0.10 WHERE JobId = 'PU_CLERK'
