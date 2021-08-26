@@ -1,6 +1,6 @@
 USE [Day7 (Function)]
 SELECT * FROM Employees
-sp_help Employees
+
 
 
 /*
@@ -95,35 +95,18 @@ SELECT FORMAT(GETDATE(),'hh:mm tt MM dd , yyyy')
 
 
 
--- 11. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
-
-SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
+-- 11. Write a query to get the FirstName, LastName who joined in the month of June.
 
 
-
-
--- 12. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
-
-SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
+SELECT FirstName , LastName , DATENAME(MM,HireDate) FROM Employees WHERE DATENAME(MM,HireDate) = 'June'
 
 
 
 
--- 13. Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
-
-SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
-
+-- 12. Write a query to get first name, hire date and experience of the employees.
+SELECT FirstName ,HireDate , DATEDIFF(MM,HireDate,GetDate()) as 'Month of Experience' FROM Employees
 
 
 
--- Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
-
-SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
-
-
-
-
-
--- Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. Give each column an appropriate label. Sort the results by the employees’ FirstName
-
-SELECT FirstName , LEN(FirstName) AS 'Length of FirstName' FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%' OR FirstName LIKE 'M%' ORDER BY FirstName ASC
+-- 13. Write a query to get first name of employees who joined in 1987.
+SELECT FirstName  , DATEPART(YEAR,HireDate) FROM Employees WHERE DATEPART(YEAR,HireDate) = 1987
