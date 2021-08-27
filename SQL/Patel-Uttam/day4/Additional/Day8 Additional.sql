@@ -42,7 +42,15 @@ Continent , Country , City ,SUM(SaleAmount) as 'TotalSale', GROUPING(Country) as
 
 
 
-SELECT Continent , Country , City , SUM(SaleAmount) as 'TotalSale', GROUPING(City) as 'Grouping_continent' FROM Location_Sale GROUP BY Continent ,Country,City
+SELECT 
+CASE WHEN GROUPING(Continent) = 1 THEN 'ALL' ELSE ISNULL(Continent,'Unknown') END AS G_continent,
+CASE WHEN GROUPING(Country) = 1 THEN 'ALL' ELSE ISNULL(Continent,'Unknown') END AS G_country,
+CASE WHEN GROUPING(City) = 1 THEN 'ALL' ELSE ISNULL(Continent,'Unknown') END AS G_city
+,SUM(SaleAmount) as 'TotalSale', GROUPING(Country) as 'Grouping_continent',GROUPING(Country) as 'Grouping_country',GROUPING(City) as 'Grouping_city' FROM Location_Sale GROUP BY ROLLUP(Continent ,Country,City)
 
 
 
+-- Grouping_ID : simillar to grouping in grouping_ID we can pass all column of GROUP BY Clause we want for grouping , as parameter to  like GOUPRING_ID([,columns])
+
+
+SELECT GROUPING_ID(Continent , Country ,City) As  'Grouping_id_ccc' , Continent , Country ,City FROM Location_Sale GROUP BY ROLLUP(Continent , Country ,City) 
