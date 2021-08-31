@@ -12,6 +12,8 @@ USE [Day9 (JOIN)]
 				-- Left Join
 				-- Right join
 				-- Full join
+			--Self Join
+
 
 
 -- Inner Join  : Inner Join use to retvire data that present at both table and satisfy join condition.
@@ -137,22 +139,24 @@ ON d.LocationID = l.LocationID
 			-- self join show a poor table design or normalize form.
 
 
-		CREATE TABLE DummyEmp 
-		(
-			EmployeeID int Primary Key,
-			EmpName varchar(25) NOT NULL,
-			ManagerID int NOT NULL
-		);
+-----------------------------------------------------------------------------------------------
+		--CREATE TABLE DummyEmp 
+		--(
+		--	EmployeeID int Primary Key,
+		--	EmpName varchar(25) NOT NULL,
+		--	ManagerID int NOT NULL
+		--);
 		
-		INSERT into DummyEmp VALUES
-		(1,'Manager',0),
-		(2,'Senior Developer',1),
-		(3,'HR',1),
-		(4,'Junior Developer',2),
-		(5,'Assistant HR',3),
-		(6,'Senior Accountant',0);
+		--INSERT into DummyEmp VALUES
+		--(1,'Manager',0),
+		--(2,'Senior Developer',1),
+		--(3,'HR',1),
+		--(4,'Junior Developer',2),
+		--(5,'Assistant HR',3),
+		--(6,'Senior Accountant',0);
 
-		
+	-------------------------------------------------------------------------------------------------
+
 		-- Display EmpName has designation of Manager.
 
 		SELECT o.EmployeeID , o.EmpName , c.EmployeeID FROM DummyEmp AS o
@@ -174,3 +178,52 @@ ON d.LocationID = l.LocationID
 		JOIN DummyEmp AS c
 		ON o.EmployeeID = c.ManagerID
 		
+
+
+-- Cross Join : Simillar to other joins Cross join also use to retrive combine data from tables, 
+			--  but unlike other join, Cross join does not use 'ON' to specify condition.
+			--  In Cross join it produce a result table as cartesian product of raw of two table.
+			--  E.x : If one table has n row and another table has m raw, then number of row result table has is (n*m).
+			--  Purpose of Cross join is to generate a result table that contains all possible combination from two tables.  
+
+
+-----------------------------------------------------------------------------------------------------------------
+			--CREATE TABLE Scanks 
+			--(
+			--	SnackNumber int PRIMARY KEY IDENTITY(1,1),
+			--	Snack Varchar(50) NOT NULL UNIQUE ,
+			--	Price int NOT NULL
+			--	CONSTRAINT notnull CHECK (Price > 0)
+			--);
+
+			--CREATE TABLE Beverages 
+			--(
+			--	BeverageNumber int PRIMARY KEY IDENTITY(1,1),
+			--	Beverage Varchar(50) NOT NULL UNIQUE ,
+			--	Price int NOT NULL
+			--	CONSTRAINT notnullbeverages CHECK (Price > 0)
+			--);
+
+
+			--INSERT INTO Scanks(Snack ,Price) VALUES('Burger',25),
+			--										('Sandwich',30),
+			--										('Samosa',20),
+			--										('Toast',15)
+
+
+			--INSERT INTO Beverages(Beverage ,Price) VALUES('Tea',10),
+			--										('Coffee',20),
+			--										('Juice',30),
+			--										('Soft Drink',25)
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+SELECT s.Snack , b.Beverage , (s.Price + b.Price) as 'Total' FROM Scanks AS s , Beverages AS b 
+
+
+-- OR
+
+SELECT s.Snack , b.Beverage , (s.Price + b.Price) as 'Total' FROM Scanks AS s 
+CROSS JOIN Beverages AS b 
+

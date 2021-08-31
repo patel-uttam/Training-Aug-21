@@ -1,10 +1,12 @@
 USE [Day9 (JOIN)]
 
-
+-------------------------------------------------------------------------------------------------------
 -- Query to create Incentive Table 
 
 --sp_rename 'Employees.HireDate', 'JoiningDate', 'COLUMN';
---SELECT EmployeeID , DATEADD(YY,1,JoiningDate) AS 'IncentiveDate' , ( Salary*0.255) AS 'IncentiveAmount' ,DepartmentID into Incentive FROM Employees
+
+--SELECT EmployeeID , DATEADD(YY,1,JoiningDate) AS 'IncentiveDate' , 
+--( Salary*0.255) AS 'IncentiveAmount' ,DepartmentID into Incentive FROM Employees
 
 SELECT * FROM Incentive
 
