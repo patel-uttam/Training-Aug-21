@@ -2,8 +2,10 @@ USE [Day10 (Subquery)]
 
 
 -- Practice Exercise
+	-- Subquery
+	-- Correlated subquery
 
--- Subquery : Subquery simply refer as query within a query.
+ -- Subquery : Subquery simply refer as query within a query.
 			--Basically subquery is use to break complex logic.
 			--For complex logic subquery provide simplified query that is easy to readable.
 			--(Some time join perform faster than subquery so, sql server rewrite subqueries as joins).
@@ -66,10 +68,11 @@ SELECT DepartmentID , COUNT(EmployeeID) AS 'Number of Employee' FROM Employees G
 
 
 
+
+
 -- Correlated subquery : Correlated subquery is subquery which is depends on outer query , correlated subquery use value of outer query.
 					--  As we know correlated subquery use value of outer query so, it execute repeatedly for each value of outer query.
 					--  correlated subquery cannot execute independently.
 
 
- SELECT DepartmentName , (SELECT SUM(EmployeeID) FROM Employees WHERE DepartmentID = Departments.DepartmentID) FROM Departments
- s
+ SELECT DepartmentName , (SELECT SUM(EmployeeID) as 'total emloyee' FROM Employees WHERE DepartmentID = Departments.DepartmentID) FROM Departments
