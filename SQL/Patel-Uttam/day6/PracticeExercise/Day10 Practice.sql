@@ -9,7 +9,7 @@ USE [Day10 (Subquery)]
 			--Basically subquery is use to break complex logic.
 			--For complex logic subquery provide simplified query that is easy to readable.
 			--(Some time join perform faster than subquery so, sql server rewrite subqueries as joins).
-			-- = , IN , >ALL/<ALL , >ANY/<ANy , EXISTS 
+			
 
 
 -- Select employee has Salary greater than average Salary

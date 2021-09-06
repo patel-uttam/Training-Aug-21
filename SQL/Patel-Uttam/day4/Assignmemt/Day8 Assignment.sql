@@ -23,19 +23,9 @@ SELECT RANK() OVER(ORDER BY Salary DESC) , Salary , CONCAT(FirstName, ' ',LastNa
 
 -- 2.Select 4th Highest salary from employee table using ranking function
 
--- RANK()
-SELECT ROW_NUMBER()OVER(ORDER BY Salary DESC) as 'index',RANK() OVER(ORDER BY Salary DESC) as 'Salary rank' , FirstName ,LastName , Salary FROM Employees
-
-SELECT TOP 1 * FROM (SELECT ROW_NUMBER()OVER(ORDER BY Salary DESC) as 'index',RANK() OVER(ORDER BY Salary DESC) as 'Salary rank' , FirstName ,LastName , Salary FROM Employees) tb1
-WHERE [Salary rank] = 10
-
-
--- DENSE_RANK()
-SELECT ROW_NUMBER()OVER(ORDER BY Salary DESC) as 'index',DENSE_RANK() OVER(ORDER BY Salary DESC) as 'Salary rank' , FirstName ,LastName , Salary FROM Employees
-
-SELECT TOP 1 * FROM (SELECT ROW_NUMBER()OVER(ORDER BY Salary DESC) as 'index',DENSE_RANK() OVER(ORDER BY Salary DESC) as 'Salary rank' , FirstName ,LastName , Salary FROM Employees) tb1
-WHERE [Salary rank] = 10
-
+WITH CTE(Rank,Salary) AS
+(SELECT DENSE_RANK() OVER(ORDER BY Salary DESC) as 'Salary rank' , Salary FROM Employees)
+SELECT TOP 1 Rank,Salary FROM CTE WHERE CTE.Rank = 4
 
 
 
@@ -62,7 +52,7 @@ SELECT MAX(Salary) 'Max Salry' , DepartmentID FROM Employees  GROUP BY Departmen
 
 -- 6.Get department wise minimum salary from employee table order by salary ascending
 
-SELECT MIN(Salary) 'Max Salry' , DepartmentID FROM Employees  GROUP BY DepartmentID ORDER BY MIN(Salary) ASC
+SELECT MIN(Salary) 'Min Salry' , DepartmentID FROM Employees  GROUP BY DepartmentID ORDER BY MIN(Salary) ASC
 
 
 

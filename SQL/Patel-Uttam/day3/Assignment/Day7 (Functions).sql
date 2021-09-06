@@ -91,7 +91,7 @@ SELECT FirstName , HireDate FROM Employees WHERE HireDate BETWEEN '1987-06-01' A
 
 -- 10. Write a query to display the current date in the following format.
 	--(Sample output : 12:00 AM Sep 5, 2014)
-SELECT FORMAT(GETDATE(),'hh:mm tt MM dd , yyyy')
+SELECT FORMAT(GETDATE(),'hh:mm tt MMMM dd , yyyy')
 
 
 

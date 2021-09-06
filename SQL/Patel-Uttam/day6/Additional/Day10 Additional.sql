@@ -38,4 +38,13 @@ USE PracticeExercise
 
 
 
--- Lead() : 
+-- Lead() : Lead() is function use to retrive subsequent row in result set without using self-join.
+		-- it useful when we required to compare two rows of same column.
+
+
+		-- compare salary of employee with first next employee (e.x 1 to 2)
+		SELECT FirstName , HireDate, DepartmentID ,Salary , LEAD(Salary,1) OVER ( ORDER BY Salary ASC) AS 'Salary of next employee' FROM Employees WHERE DepartmentID = 50
+
+
+		-- compare salary of employee with second next employee (e.x 1 to 3)
+		SELECT FirstName , HireDate, DepartmentID ,Salary , LEAD(Salary,2) OVER ( ORDER BY Salary ASC) AS 'Salary of next employee' FROM Employees WHERE DepartmentID = 50

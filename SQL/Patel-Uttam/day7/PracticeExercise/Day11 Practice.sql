@@ -89,10 +89,6 @@ SELECT TOP 20 EmployeeID , FirstName , LastName , JobId FROM Employees
 INSERT INTO view2
 	SELECT 22,'Uttam','Patel','PU_MAN';
 
-
-ALTER view2 
-
-
 -------------------------------------------------------------------------------
 
 
@@ -166,5 +162,5 @@ SELECT * FROM view4
 -- updating FullName 
 
 UPDATE view4 SET FullName = 'Uttam Patel' WHERE EmployeeID = 22
--- give error
+-- give error Fullname is calculated column
 -------------------------------------------------------------------------------

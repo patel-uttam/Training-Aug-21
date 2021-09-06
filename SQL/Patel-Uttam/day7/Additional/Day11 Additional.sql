@@ -1,6 +1,7 @@
 USE PracticeExercise
 
--- Partitioned view
+-- Partitioned view : partitioned view use to create view that consist partitioning table and each table have one column that partition that table from other table.
+					--Column use to partition tables declare as primary key along with primary key of that table.
 
 -- Creating Table 4
 
@@ -77,3 +78,34 @@ GO
 
 
 
+
+-- Recursive CTE : Recursive CTE means a repeatedly execute of Select Statement of CTE untill query setisfied condition.
+			--	UNION ALL with CTE it self
+
+DECLARE @no int= 10;
+
+WITH cte As
+(
+	SELECT @no as Number
+	UNION ALL
+	SELECT Number-1
+	FROM cte
+	WHERE Number > 0
+)
+SELECT * FROM Employee
+
+
+
+-- multiple CTE : In Multiple CTE we create more than one CTE in single 'WITH' Statement. 
+			-- Just as concept
+
+
+WITH 
+cte1 AS
+(SELECT '1' CTEType , EMPLOYEE_ID, FIRST_NAME FROm Employee ), 
+
+cte2 AS
+(SELECT '2' CTEType,EMPLOYEE_ID, LAST_NAME FROm Employee )
+SELECT * FROM cte1
+UNION ALL
+SELECT * FROM cte2

@@ -10,6 +10,10 @@ USE [Day13 (JSON)]
 		--	JSON_MODIFY
 	--	Convert JSON collections to a rowset
 		--	OPENJSON
+	--Convert SQL Server data to JSON or export JSON
+		--FOR JSON PATH	
+		--FOR JSON AUTO
+		--WITHOUT_ARRAY_WRAPPER
 
 
 
@@ -306,3 +310,28 @@ USE [Day13 (JSON)]
 
 
 
+
+
+
+--Convert SQL Server data to JSON or export JSON
+		--FOR JSON PATH	
+		--FOR JSON AUTO
+
+--  FOR JSON PATH : FOR JSON PATH use to convert result table into json object , FOR JSON AUTO is simillar to FOR JSON PATH.
+
+	--
+	SELECT * FROM Employees FOR JSON PATH
+
+	-- with root
+	SELECT * FROM Employees FOR JSON PATH , ROOT('Employee')
+
+	-- with NULL
+	SELECT * FROM Employees FOR JSON PATH , INCLUDE_NULL_VALUES
+
+
+	--Nested output
+	SELECT EmployeeID AS 'ID' , FirstName AS 'NAME.FirstName',LastName AS 'NAME.LastName' ,Email AS 'Contact.email',PhoneNumber AS 'Contact.phone' FROM Employees FOR JSON PATH , INCLUDE_NULL_VALUES
+
+
+	--without array wrapper
+		SELECT EmployeeID AS 'ID' , FirstName AS 'NAME.FirstName',LastName AS 'NAME.LastName' ,Email AS 'Contact.email',PhoneNumber AS 'Contact.phone' FROM Employees FOR JSON PATH , WITHOUT_ARRAY_WRAPPER
