@@ -5,6 +5,8 @@ SELECT * FROM Departments
 -- Practice Exercise
 
 
+
+
 -- String Function 
 
 --1
@@ -54,6 +56,11 @@ SELECT  STUFF('UTTAN',4,2,'Has')  FROM Employees
 
 SELECT CHAR(122) --integer to character (integer from 65 to 122 Cap and Small) 
 
+SELECT ASCII('A') 
+
+
+--11
+SELECT UNICODE(FirstName) FROM Employees 
 
 
 
