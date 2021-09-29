@@ -1,0 +1,375 @@
+<!--1.--> <!--Learn-->
+
+<!--2.--> <!--Practice Exercise-->
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<!--Learn-->
+
+<!-- 1. -->
+
+<!-- HTML5 Media Tags(Audio and Video) -->
+<html>
+    <head>
+    </head>
+
+    <body>
+        <header id="header_">
+            <nav>
+                <p>Home</p>
+            </nav>
+        </header>
+        <article id="video_section">
+        <header>
+            <nav><big><b>Video Gallery</b></big></nav>
+        </header>
+        
+            <div>
+                <video width="480px" controls>
+                    <source src="video_1.mp4" type="video/mp4">
+                    <P><b>Video is not available OR Video format is not supported.</b></P>
+                </video>
+            </div>
+            <div>
+                <video width="480px" controls>
+                    <source src="video_2.mp4" type="video/mp4">
+                    <P><b>Video is not available OR Video format is not supported.</b></P>
+                </video>
+            </div>
+            <div>
+                <video width="480px" controls>
+                    <source src="video_3.mp4" type="video/mp4">
+                    <P><b>Video is not available OR Video format is not supported.</b></P>
+                </video>
+            </div>
+            <div>
+                <video width="480px" autoplay muted>
+                    <source src="video_1.mp4" type="video/mp4">
+                    <P><b>Video is not available OR Video format is not supported.</b></P>
+                </video>
+            </div>
+            <div>
+                <video width="480px" autoplay>
+                    <source src="video_2.mp4" type="video/mp4">
+                    <P><b>Video is not available OR Video format is not supported.</b></P>
+                </video>
+            </div>
+            <div>
+                <video width="480px" autoplay muted>
+                    <source src="video_3.mp4" type="video/mp4">
+                    <P><b>Video is not available OR Video format is not supported.</b></P>
+                </video>
+            </div>
+
+        </article>
+
+        <article id="audio_section">
+            <header>
+                <nav><big><b>Audio Gallery</b></big></nav>
+            </header>
+            
+                <div>
+                    <audio wdth ="600px" height="100px" controls>
+                        <source src="music_1.mp3" type="audio/MP3">
+                    </audio>
+                </div>
+
+                <div>
+                    <audio wdth ="600px" height="100px" controls autoplay muted>
+                        <source src="music_1.mp3" type="audio/MP3">
+                    </audio>
+                </div>
+            </article>
+    
+    <hr/><hr/>
+    <br/><br/>
+    <!-- CSS Selector  ,background , font , border , position , float , display -->
+    <p>CSS Selector ,background ,font ,border ,position ,float ,display</p>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: ivory;
+
+            /*background-image:linear-gradient(red ,orange,yellow,green,darkblue,blue,black);*/
+            /*background-image: radial-gradient(grey,lightgrey,white);*/
+            /*background-image: repeating-linear-gradient(red 2%,orange 6%,yellow 5%,green 10%,darkblue 15%,blue 7%,black 20%);*/
+            background-image:url(/photo_1.jpg);
+            background-size: 500px;
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+        div ,header{
+            text-shadow: khaki;
+        }
+        #header_{
+            background-color: rgb(111, 104, 129);
+            height: fit-content;
+            margin-bottom: 30px;
+            padding : 5px 0px 5px px;
+        }
+        #header_ nav{
+            padding: 10px 0px 10px 0px;
+            margin-left: 10px;
+            
+        }
+        #header_ nav p{
+            color: rgb(197, 182, 211);
+            font-size: 25px;
+            font-style: oblique;
+        }
+        #video_section header{
+            width: parent;
+            background-color: rgba(128, 128, 128, 0.295);
+            padding : 10px 0px 10px 0px;
+            margin-bottom: 20px; 
+        }
+        #video_section header nav{
+            height: fit-content;
+            padding-left: 15px;
+            color: rgb(92, 107, 122);  
+        }
+        #video_section header nav b{
+            color: rgb(92, 107, 122);
+        }
+        #video_section{
+            background-color: rgba(62, 94, 105, 0.226);
+            padding: 20px   ;
+            width: parent;
+            
+        }
+        #video_section div{
+            margin-left: 10px;
+            width: max-content;
+            display: inline-block;
+            position: relative;
+        }
+
+        #audio_section header{
+            width: parent;
+            background-color: rgba(92, 107, 122, 0.466);
+            padding : 10px 0px 10px 0px;
+            margin-bottom: 20px; 
+        }
+        #audio_section header nav{
+            height: fit-content;
+            padding-left: 15px;
+            color: rgb(128, 128, 128);
+        }
+        #audio_section header nav b{
+            color: rgb(128, 128, 128);
+        }
+        #audio_section{
+            background-color: rgba(40, 82, 97, 0.226);
+            margin-top: 50px;
+            padding: 20px;
+            width: parent;
+            
+        }
+        #audio_section div{
+            margin-left: 10px;
+            margin-top: 10px;
+            width: max-content;
+            display: inline-block;
+            position: relative;
+            background-color: rgba(40, 82, 97, 0.226);
+        }
+        hx{
+            color: red;
+        }
+        div{
+            background-color: bisque;
+        }
+        #first_div{
+            border : 5px red solid
+        }
+        .links{
+            display:inline;
+            font-size: 30px;
+            font-family:  geneva1,cursive,tahoma;
+        }
+        p.links{
+            width: fit-content;
+            font-display: inherit;
+        }
+        a.links{
+            width: fit-content;
+            display:block;
+            font-size: 20px;
+            font-family: monospace;
+            font-weight: bolder;
+        }
+        #aside_id {
+            width: auto;
+            height: fit-content;
+            padding: 10px;
+            background: wheat url(/photo_21.jpg) no-repeat;
+            color: green;
+        }
+        #aside_id p > img{
+            width: 50px;
+            height: 50px;
+            float: right;
+        }
+        #class_display_p{
+            height: 50px;
+            display: grid;
+            overflow-block: auto;
+            overflow: scroll;
+        }
+        h2 + p{
+            color: maroon;
+        }
+        div.class_display{
+            height: 40px;
+            display: flex;
+            overflow-y: scroll;
+        }
+        div.class_display > h3{
+            color: indigo;
+        }
+        div.class_display > p{
+            color: lightcoral;
+        }
+
+        #relative_pos{
+            position: relative;
+            left: 50px;
+            top: 10px;
+            bottom : 5px;
+            border: 3px solid #73AD21;
+            border-style: groove;
+            margin:0px
+            }
+        .relative{
+            width: 100px;
+            height: 100px;
+            display:inline-table;
+            background-attachment:scroll ;
+        }
+    </style>
+    
+    <br/>
+    <hx>This headig tag are in body tag</hx>
+    <br/><br/>
+    <div>
+        <p>this p tag in inside div tag and div tag is inside body tag</p>
+        <h4>This h4 tag is inside div tag and div tag is inside body tag</h4>
+    </div>
+    <br/><br/>
+    <div id="first_div">
+        <h5>this h2 tag in inside div(with id first_div) tag and div tag is inside body tag</h2>
+        <h4>This h4 tag is inside div(with id first_div) tag and div tag is inside body tag</h4>
+    </div>
+    <br/><br/>
+    <p class="links">this paragraph has class 'links'</p>
+    <a href="https://www.google.com" target="_blank" class="links">google</a>
+    <a href="https://www.facebook.com" target="_blank" class="links">facebook</a>
+    <a href="https://www.wikipedia.com" target="_blank" class="links">wikipidia</a>
+    <a href="https://www.youtube.com" target="_blank" class="links">youtube</a>  
+    <br/><br/>
+
+    <div class="class_display" id="class_display_div">
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum est, incidunt ullam laboriosam quaerat quas, aliquid perferendis temporibus quibusdam adipisci natus id minus illo. Accusamus ipsum ipsa veniam consequatur sit.</h3>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum est, incidunt ullam laboriosam quaerat quas, aliquid perferendis temporibus quibusdam adipisci natus id minus illo. Accusamus ipsum ipsa veniam consequatur sit.</h3>
+    </div>
+    <br/><br/>
+    <div class="class_display" id="class_display_p">
+        <p>p tag -> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum est, incidunt ullam laboriosam quaerat quas, aliquid perferendis temporibus quibusdam adipisci natus id minus illo. Accusamus ipsum ipsa veniam consequatur sit.</p>
+        <p>p tag -> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum est, incidunt ullam laboriosam quaerat quas, aliquid perferendis temporibus quibusdam adipisci natus id minus illo. Accusamus ipsum ipsa veniam consequatur sit.</p>
+    </div>
+    <br/><br/>
+    <aside id="aside_id" class="class_display">
+        <p><img src="https://www.w3schools.com/cssref/gradient_linear.png" alt="https://www.w3schools.com/cssref/gradient_linear.png">
+            The linear-gradient() function sets a linear gradient as the background image.
+            <bR/>
+            To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.
+                    </p>    
+    </aside>
+    <br/><br/>
+    <h2>position: relative;</h2>
+
+    <p>An element with position: relative; is positioned relative to its normal position:</p>
+    <br/>
+    <div class="relative" >
+        This div element has no position 
+    </div>
+    <div class="relative" id="relative_pos">
+        This div element has position: 'relative'  left :50px;
+    </div>
+
+
+
+<br/><br/>
+<hr/><hr/>
+<br/><br/>
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+
+
+
+
+<!-- Practice Exercise -->
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- Provide Border to one paragraph and write some dummy text into it -->
+
+<br><br>
+    <p>Practice 2</p>
+    
+    <p>Quotes</p>
+        <ol type="I" style="border-style: dashed; border-radius: 2px; border-width: 2px; border-bottom: solid; border-top: dotted; border-right: double; border-spacing: 20px; width: fit-content; margin: 5px; ">
+            <li style="padding: 10px;">Bombs and pistols do not make a revolution. The sword of revolution is sharpened on the whetting stone of ideas.</li>
+            <li style="padding: 10px;">The greatest glory in living lies not in never falling, but in rising every time we fall.</li>
+        </ol>
+    <br><br>
+
+<!-- Create city list in horizontal order(using display properties) -->
+    <p>Practice 3</p>
+    <div style="padding: 25px;">
+        <ul type="circle" style="display: inline-block;">
+            <li style="display: inherit;">Ahmedabad </li>
+            <li style="display: inherit;">Gandhinagar </li>
+            <li style="display: inherit;">Baroda </li>
+            <li style="display: inherit;">Surat </li>
+        </ul>
+    </div>
+    <br><br>
+
+<!-- Provide universal selector and apply blue color to a page -->
+    <p>Practice 4 <br>
+        this practice for applying blue color universally
+    </p>
+    <style>
+        *{
+            color: blue;
+        }
+    </style>
+    <br><br>
+<!-- Suppose html markup below, apply all h1 and h2 blue color. -->
+    <p>Practice 5</p>
+    <style>
+        #practice_5 h1 , h2{
+            color : blue
+        }
+        #practice_5{
+            background-color: black;
+        }
+    </style>
+    <div id="practice_5">
+        <h1>Heading1</h1>
+        <h2>Sub Heading</h2>
+        <h1>Heading2</h1>
+        <h2>Sub heading</h2>
+    </div>
+
+    <br><br>
+</body>
+</html>

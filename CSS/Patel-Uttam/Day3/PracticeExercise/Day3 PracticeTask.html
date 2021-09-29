@@ -1,0 +1,68 @@
+<!-- Practice -->
+<!--
+    Parent div should contain 3 div inside. Div should be arranged in following manner.
+    Practice position properties static, relative, fixed and absolute.
+    Suppose we have a div with specific height and width and we need to arrange more text into it. Use overflow properties.
+-->
+
+
+<html>
+    <head>
+        <style>
+            #div_main1{
+                background-color: lightcoral;
+                display: flex;
+                padding: 10px;
+                width: 100%;
+                height: 500px;
+            }
+            .div_inner1{
+                width: 33%;
+                height: auto;
+                background-color: lightseagreen;
+                margin: 20px;
+            }
+        </style>
+
+        <title>Day3 Practice</title>
+    </head>
+    <body>
+       <p>Practice 1</p>
+        <div id="div_main1">
+            <div class="div_inner1" style="background-color: lightseagreen;">
+
+            </div>
+            <div class="div_inner1" style="background-color: lime;">
+
+            </div>
+            <div class="div_inner1" style="background-color: limegreen;">
+
+            </div>
+        </div>
+        <br><br>
+        <p>Practice 2</p>
+        <div id="div_main2">
+            <div class="div_inner21" style="width: 300px; height: 300px; position: fixed; bottom: 100px;">
+                <p>fixed</p>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vel, libero nesciunt voluptatem facere exercitationem quam velit ipsam corporis sed aliquid debitis obcaecati voluptas quo ullam aspernatur odit laudantium esse.</h2>
+            </div>
+            <p style="color: maroon;">lorem * 4</p>
+
+            <div class="div_inner22" style="width: 300px; height: 300px; position: relative; top: 100px; left: 100px;">
+                <p>relative</p>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis expedita rerum, optio incidunt obcaecati voluptatibus officiis dicta sequi harum porro doloremque magnam beatae ducimus repudiandae hic quos voluptas, voluptatum labore.</h3>
+            </div>
+            <p style="color: maroon;">lorem * 4</p>
+
+            <div class="div_inner23" style="width: 300px; height: 300px; position: absolute; bottom: 5px; left:1000px;">
+                <p>absolute</p>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam incidunt corrupti eos vero, labore ex atque. Itaque tempora distinctio doloribus cum corporis, iusto, accusamus neque vitae eius consequatur natus!</h2>
+            </div>
+            <div class="div_inner23" style="width: 300px; height: 300px; margin-bottom: 100px; position: static; float:right; overflow-y: scroll;">
+                <p>Static and practice 3</p>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam incidunt corrupti eos vero, labore ex atque. Itaque tempora distinctio doloribus cum corporis, iusto, accusamus neque vitae eius consequatur natus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam incidunt corrupti eos vero, labore ex atque. Itaque tempora distinctio doloribus cum corporis, iusto, accusamus neque vitae eius consequatur natus!</h2>
+            </div>
+        </div>
+
+    </body>
+</html>

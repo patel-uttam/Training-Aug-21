@@ -1,0 +1,295 @@
+
+
+<!--1.--> <!--Learn-->
+
+<!--2.--> <!--Practice Exercise-->
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<!--Learn-->
+
+<!-- 1. -->
+<!-- What is HTML5 : HTML is Mark-Up language , HTML is use to define Basic structure of element in web-page
+        <!DOCTYPE html> 
+    KeyWord : Keyword are predefine word/letter use to define different component of HTML 
+        Like.. HEAD ,P ,BR ,etc.. 
+    -->
+    <!DOCTYPE HTML>
+    <head>
+    <title>Day1 Practice</title>
+    </head>
+    <body>
+    <!-- 2. --> 
+    <!-- Empty Tag : Empty tag is tag that not required Ending/Closing Tag.
+        <br/> , <hr/>
+    -->
+
+    <p>* Learn *</p>
+    <hr/><hr/>
+
+
+    <p>Hello <br/> World</p>
+    <hr/>
+    <p>Hello World</p>
+    
+    
+    <!-- 3. --> 
+    <!-- Common Tag : Most common tag that required for HTML document.
+        html : html tag use to identify that it's HTML document.
+        head : head tag use to contain scripts code, style code and some keyword that help engine to search for web page.
+        title : title define the title name of page
+        body : In body it contains all Element and Component with data that we want to saw for that page.
+    -->
+    <html>
+        <head>
+            <scr>
+        </head>
+    </html>
+
+
+<hr/><hr/>
+<BR/><BR/><BR/><BR/><BR/><BR/>
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<!--Practice Exercise-->
+
+<!--
+<1> Display Student Report Card, Which contains field like Name, RollNo, Year Of Passing. Different subject marks should be
+displayed with its grade
+Note: use table tag
+
+<2> You are working in some company as HR. you have been assigned a task to arrange department hierarchy example: employee
+working under some manager.
+Note: Use Ordered and unordered list with its list-style-type attribute, practice nested list as well
+
+<3> Create Login Form with field UserName and Password field.
+
+<4> Use Article tag display one latest news.
+
+<5> Create Horizontal menu. Menu item will Home, AboutUs, ContactUS.
+Use Nav tag and anchor tag
+
+-->
+
+<p>* Practice Exercise *</p>
+<hr/><hr/>
+
+<!-- <1> -->
+<P>Practice 1</P>
+    <table border="1" style="text-align: center;">
+    <tr>
+        <th colspan="4">Student Report</th>       
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>RollNo</td>
+        <td>Passing Year</td>
+        <td>Subject details</td>
+    </tr>
+    <tr>
+        <td>Uttam</td>
+        <td>Patel</td>
+        <td>2017</td>
+        <td><table border="1">
+            <tr>
+                <td>Maths</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>Computer</td>
+                <td>82</td>
+            </tr>
+
+        </table></td>
+    </tr>
+    <tr>
+        <td>Jaymin</td>
+        <td>Patel</td>
+        <td>2017</td>
+        <td><table border="1">
+            <tr>
+                <td>Maths</td>
+                <td>73</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>79</td>
+            </tr>
+            <tr>
+                <td>Computer</td>
+                <td>80</td>
+            </tr>
+
+        </table></td>
+    </tr>
+    <tr>
+        <td>Hardik</td>
+        <td>Patel</td>
+        <td>2017</td>
+        <td><table border="1 dotted">
+            <tr>
+                <td>Maths</td>
+                <td>68</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>Computer</td>
+                <td>70</td>
+            </tr>
+
+        </table></td>
+    </tr>
+
+</table>   
+<BR/><BR/>
+
+<!-- <2> -->
+
+<p>Practice 2</p>
+
+<p>Managing Director</p>
+<ol>
+    <li>CEO</li>
+</ol>
+<hr/>
+<p>CEO</p>
+<ol reversed  type="i">
+    <li>COO</li>
+    <li>CTO</li>
+    <li>CFO</li>
+</ol>
+<hr/>
+<p>Managing Director</p>
+<ul type="circle">
+    <li>CEO</li>
+    <ol type="i" >
+        <li>COO</li>
+        <li>CTO
+            <ul>
+                <li>Manager</li>
+                <li>Senior Developer</li>
+            </ul>
+        </li>
+        <li>CFO</li>
+    </ol>
+
+</ul>
+
+
+<BR/><BR/>
+
+<!-- <3> -->
+<p>Practice 3</p>
+    
+        <section style="border: solid; border-radius: 1px; border-color: black; padding: 1px; width: fit-content; height: fit-content; ">
+            <h3 style="text-align: center; margin: 0px;">login Form</h3>
+            <hr>
+            <form action="result.html" , method="GET" style="align-items: center;">
+                <div>
+                    <label>
+                        Email</br>
+                        <input style="box-sizing: content-box;" type="email" placeholder="Enter email" required>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Password</br>
+                        <input style="box-sizing: content-box;" type="password" placeholder="Enter email" required>
+                    </label>
+                </div>
+                <div style="margin:0 50px 0 50px">
+                    <br>
+                    <button type="submit" style="color: red;">Submit</button>
+                </div>
+    
+            </form>
+        </section>
+
+
+
+
+<BR/><BR/>
+
+
+<!--4.-->
+<P>Practice 4</P>
+<article style="border: 2px gray dotted; padding: 0px; margin: 0px;">
+    <h2 style="color: red;"><u>LATEST NEWS</u></h2>
+
+    <header style="background-color:rgba(219, 221, 224, 0.233); width: fit-content; margin: 0px;">
+        <h2 style="color: crimson;">
+            Pegasus hearing in SC: ' Centre says it has ‘nothing to hide’, but refuses to file affidavit '.
+         </h2>
+         <h4 style="color: gray;">Solicitor general Tushar Mehta cited ‘national security’ yet again, and the apex court said it would pass its order in 2-3 days.</h4> 
+    </header>
+    <div style="background-color: grey; width:fit-content;">By Anna Priyadarshini On 13 Sep, 2021</div>
+    
+    <section style="margin : 5px ;">
+         <div>
+             <img src="newslaundry_2021-09_pegasus_court.jpg" alt="newslaundry_2021-09_pegasus_court" width="950px" height="500px">
+        </div>
+        <div style="width: 950px;">
+           <p>Even after the central government was given more time by the Supreme Court to file a detailed response on petitions pertaining to the Pegasus scandal, the centre today outright refused to do so, citing “national security”.</p>
+
+<p>During today’s hearing, solicitor general Tushar Mehta told the apex court that such issues “cannot be debated” in an affidavit or be a subject of debate in court or public discourse due to “its own pitfalls”.</p>
+
+<p></p>The court was hearing a batch of petitions filed in the context of reports on snooping using the Pegasus spyware. The petitions seek a judicial or SIT probe into the snooping issue.</p>
+
+<p>The petitioners include the Editors Guild of India, advocate ML Sharma, CPIM parliamentarian John Brittas, professor and activist Jagdeep Chokkar, and journalists N Ram, Sashi Kumar, Paranjoy Guha Thakurta, SNM Abdi, Prem Shankar Jha, Rupesh Kumar Singh, and Ipsa Shatakshi. The last five are also named as “potential targets” of the spyware.</p>
+        </div>
+    </section>    
+</article>
+
+
+<BR/><BR/>
+
+
+<!--5.-->
+<p>Practice 5</p>
+<header style="background-color: rgba(77, 74, 74, 0.718); width: parent; ">
+
+    <nav style="width: 1500px; padding: 0px 100px 0px 10px; font-size: 25px;" >
+            <a href="" style="text-decoration: solid; color: black;">Home</a>
+            &emsp;
+            <a href="" style="text-decoration: solid; color: black;">About US</a>
+            &emsp;
+            <a href="" style="text-decoration: solid; color: black;">Contact US</a>
+    </nav>
+</header>
+<br/>
+<br/>
+<header style="background-color: rgba(77, 74, 74, 0.718); width: parent; ">
+
+    <nav style="width: 1500px; padding: 0px 0px 0px 1100px; font-size: 25px;" >
+            <a href="" style="text-decoration: solid; color: black;">Home</a>
+            &emsp;
+            <a href="" style="text-decoration: solid; color: black;">About US</a>
+            &emsp;
+            <a href="" style="text-decoration: solid; color: black;">Contact US</a>
+    </nav>
+</header>
+
+
+
+
+<BR/><BR/>
+
+<hr/><hr/>
+
+</body>
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->

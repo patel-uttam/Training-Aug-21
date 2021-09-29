@@ -1,0 +1,93 @@
+<!-- CSS Media Queries/CSS Grid Layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div_outer{
+
+            background-color: rgba(76, 76, 94, 0.322);
+            display: grid;
+            grid-row: 1;
+            grid-column: span;
+        }
+        #div_outer img{
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+        }
+        #div_outer_nav_1{
+            padding-top: 100px;
+        }
+        #div_outer_nav_1 a{
+            display: inline;
+            padding:20px;
+        }
+        .div_inner{
+            padding: 25px;
+            font-size: 25px;
+        }
+
+ 
+        @media screen and (max-width:992px){
+            #div_outer{
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (min-width:992px){
+            .div_inner p {
+                color: olive;
+            }
+        }
+
+        @media (orientation : landscape){
+            #div_outer{
+                background-color: orange    ;
+            }
+        }
+
+        @media print {
+            body{
+                background-color: rebeccapurple;
+            }
+            .div_inner{
+                background-color: peru;
+            }
+        } 
+
+</style>
+</head>.
+<body>
+    <!-- Media queries -->
+
+    <div id="div_outer" >
+        <img src="../../photo_1.jpg" alt="photo1">
+        <div class="div_inner">
+            <p>this paragraph</p>
+            <p>this paragraph</p>
+            <p>this paragraph</p>
+            <p>this paragraph</p>
+        </div>
+        
+        <div class="div_inner">
+            <p>this paragraph 2</p>
+            <p>this paragraph 2</p>
+            <p>this paragraph 2</p>
+            <p>this paragraph 2</p>
+        </div>
+        <nav id="div_outer_nav_1">
+            <a href="#">link 1</a>
+            <a href="#">link 2</a>
+            <a href="#">link 3</a>
+            <a href="#">link 4</a>
+            <a href="#">link 5</a>
+        </nav>
+    </div>
+
+    <p>Practice 1</p>
+</body>
+</html>

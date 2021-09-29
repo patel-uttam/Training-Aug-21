@@ -1,0 +1,158 @@
+<!-- Practice CSS BOX model,FLEX model-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Day4 Practice
+        </title>
+
+        <style>
+            #flex_prac1{
+                width: 500px;
+                height: 400px;
+                background-color: cornflowerblue;
+                border: 15px green solid;
+                align-items: center;
+                padding: 15px;
+            }
+            .flex_p_prac1{
+                color: indigo;
+                width: 300px;
+                height: 200px;
+                padding: 50px;
+                border: 10px;
+                border-color: gray;
+                border-style: inset;
+                border-radius: 5px;
+                background-color: brown;                
+            }
+            #flex_div{
+                width: 500px;
+                height: 400px;
+                background-color: cornflowerblue;
+                border: 15px green solid;
+                align-items: center;
+                padding: 15px;
+                width: 100%;
+                height: auto;
+                display: flex;
+                direction: ltr;
+            }
+            .flex_p{
+                color: indigo;
+                width: 300px;
+                height: 200px;
+                padding: 50px;
+                border: 10px;
+                border-color: gray;
+                border-style: inset;
+                border-radius: 5px;
+                background-color: brown;
+                width: 300px;
+                height: 200px;
+                margin: 0px 20px;
+            }
+            #flex_prac3_out{
+                border: 1px black;
+                padding: 5px 10px;
+                width: fit-content;
+                height: fit-content;
+                background-color: white;
+                    display: flex;
+                    flex-wrap: wrap;
+                padding: 0px 5px;
+            }
+            #flex_prac3_in{
+                flex: 50%;
+                max-width:300px ;
+                padding: 0px 5px;
+            }
+            #flex_prac3_out img{
+                margin-top: 8px;
+                vertical-align: middle;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <b>Box model</b>
+        <div>
+            <p>A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. ... Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point.</p>
+        </div>
+        <br>
+        <b>Flex model</b>
+        <div id="flex_div" >
+            <p class="flex_p">
+                A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. ... Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point.
+            </p class="flex_p">
+            <p>
+                A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. ... Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point.
+            </p>
+            <p class="flex_p" style="-ms-flex-item-align:end;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt aperiam hic cum eveniet amet error esse minus sunt, at consequuntur, beatae quo eum. Asperiores perferendis saepe dolor repellat officia.
+            </p>
+        </div>
+        <br><br><br><br>
+
+        <!--Create a flexbox with four flex items-->
+        <b>Practice 1</b>
+        <div id="flex_prac1" style="background-color: khaki; display: flexbox; height: fit-content;">
+            <p class="flex_p_prac1" style="background-color: lightcoral;">
+                A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. ... Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point.
+            </p >
+            <p class="flex_p_prac1" style="background-color: lightcoral;">
+                A paragraph wAS a series of sentences that are organized and coherent, and are all related to a single topic. ... Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point.
+            </p>
+            <p class="flex_p_prac1" style="background-color: lightcoral;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt aperiam hic cum eveniet amet error esse minus sunt, at consequuntur, beatae quo eum. Asperiores perferendis saepe dolor repellat officia.
+            </p>
+            <p class="flex_p_prac1" style="background-color: lightcoral;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt aperiam hic cum eveniet amet error esse minus sunt, at consequuntur, beatae quo eum. Asperiores perferendis saepe dolor repellat officia.
+            </p>
+        </div>
+        <br><br><br>
+
+        <!-- Flexbox with three flex items –right to left direction -->
+        <b>Practice 2</b>
+        <div id="flex_div" style="direction: rtl;">
+            <p class="flex_p" >
+                A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. ... Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point.
+            </p >
+            <p class="flex_p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt aperiam hic cum eveniet amet error esse minus sunt, at consequuntur, beatae quo eum. Asperiores perferendis saepe dolor repellat officia.
+            </p>
+        </div>
+        <br><br><br><br>
+        <b>Practice 3</b>
+        <div id="flex_prac3_out">
+            <div id="flex_prac3_in">
+                <img src="../../../images/cs.jpg" style="width: 300px; height: 250px;">                
+                </img>
+                <img src="../../../images/dota.webp" style="width: 300px; height: 400px;">
+                </img>
+            </div>
+            <div id="flex_prac3_in" >
+                <img src="../..../images/valorant.webp" style="width: 300px; height: 400px;">                
+                </img>
+                <img src="../..../images/photo_3.jpg" style="width: 300px; height: 250px;">
+                </img>
+            </div>
+            <div id="flex_prac3_in">
+                <img src="../..../images/cs.jpg" style="width: 300px; height: 400px;">                
+                </img>
+                <img src="../..../images/dota.webp" style="width: 300px; height: 250px;" >
+                </img>
+            </div>
+            <div id="flex_prac3_in" >
+                <img src="../..../images/photo_3.jpg"  style="width: 300px; height: 250px;">                
+                </img>
+                <img src="../..../images/valorant.webp" style="width: 300px; height: 400px;" >
+                </img>
+            </div>
+
+        </div>
+
+    </body>
+</html>

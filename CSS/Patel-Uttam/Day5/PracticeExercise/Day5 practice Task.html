@@ -1,0 +1,127 @@
+<!-- You have one h1 and one paragraph in your page with blue color border. For all the media screen and query selector (maximum width 500px) it should be change to red color border. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Task</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        p{
+            width: 400px;
+            height: 100px;
+            overflow: scroll;
+            border: 2px dotted darkgray;
+            color: darkred;
+            text-align: left;
+        }
+        h1{
+            width: 300px;
+            height: 100px;
+            overflow: scroll;
+            border: 2px solid blue;
+            padding: 5px;
+            background-color:floralwhite ;
+        }
+        #div_outer{
+            display: flex;
+        }
+        .div_inner{
+            
+            width: fit-content;
+            height: fit-content;
+            background-color: red; 
+        }
+
+        @media only screen and (max-width:500px) {
+            #div_outer{
+                display: block;
+            }
+            .div_inner{
+            width: fit-content;
+            height: 100px;
+            background-color: blue;
+            }
+            p,h1
+            {
+                border: 2px solid red;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+            img{
+                visibility: hidden;
+            }
+        }
+
+        @media only screen and (min-width:501px) {
+            #div_outer{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .div_inner{
+            width: fit-content;
+            height:auto;
+            background-color: white;
+            margin: 25px;
+            }
+            p,h1
+            {
+                border: 2px solid green;
+                color: orangered;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 25px;
+            }
+            img{
+                visibility: visible;
+            }
+        }
+
+        @media only screen and (min-width:992px) {
+            #div_outer{
+                display: flex;
+            }
+            .div_inner{
+            width: fit-content;
+            height: 100px;
+            background-color: blue;
+            }
+            p,h1
+            {
+                border: 2px solid red;
+                color: black;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 30px;
+            }
+            img{
+                visibility: visible;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div_outer">
+        <div class="div_inner">
+            <img src="../../photo_1.jpg" alt="photo1">
+        </div>
+        <div class="div_inner">
+            <h1>Header</h1>
+        </div>
+        <div class="div_inner">
+            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, eaque. Molestias ipsum laborum aut repellat, itaque minima voluptatem pariatur similique, officiis aperiam, ducimus illo numquam amet sunt? Quis sed tempora tempore debitis alias aliquam, officia voluptas consequatur dolorem modi maiores ratione ex dolore natus, vero enim.</P>
+        </div>
+    
+    </div>
+</body>
+</html>
