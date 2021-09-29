@@ -1,0 +1,641 @@
+<!-- Bootstrap 2-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day8 Practice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header class="container.fluid pt-3 pb-1  mb-5 bg-warning sticky-top">
+        <div class="container w-300 font-weight-bold"><p>Day8 Practice</p></div>
+    </header>
+    <div class="bg-dark p-1 mb-5 text-light text-center">Grid System</div>
+
+    <!-- Equal width -->
+    <div class="container ">
+        <div class="row">
+            <div class="col border border-dark">Equal width assign</div>
+            <div class="col border border-dark">Equal width assign</div>
+            <div class="col border border-dark">Equal width assign</div>
+            <div class="col border border-dark">Equal width assign</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+    <!-- Equal with stack -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md border border-dark">Equal width stack</div>
+            <div class="col-md border border-dark">Equal width stack</div>
+            <div class="col-md border border-dark">Equal width stack</div>
+            <div class="col-md border border-dark">Equal width stack</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+    <!-- auto -->
+    <div class="container">
+        <div class="row">
+            <div class="col-8 border border-dark">auto width assign</div>
+            <div class="col border border-dark">auto width assign</div>
+            <div class="col border border-dark">auto width assign</div>
+            <div class="col-2 border border-dark">auto width assign</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+    <!-- responsive -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 border border-dark">
+                <p>this is paragraph 1 of div</p>
+                <p>this is paragraph 2 of div</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 border border-dark">
+                <p>this is paragraph 1 of div</p>
+                <p>this is paragraph 2 of div</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 border border-dark">
+                <p>this is paragraph 1 of div</p>
+                <p>this is paragraph 2 of div</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 border border-dark">
+                <p>this is paragraph 1 of div</p>
+                <p>this is paragraph 2 of div</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+    <!-- odering columns -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md order-4 border border-dark">Order 1</div>
+            <div class="col-md order-2 border border-dark">Order 2</div>
+            <div class="col-md order-1 border border-dark">Order 3</div>
+            <div class="col-md order-3 border border-dark">Order 4</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+    <!-- offset -->
+    <div class="container">
+        <div class="row">
+            <div class="col-2  border border-dark">first div</div>
+            <div class="col-2 ml-auto border border-dark">second div</div>
+            <div class="col-2 mr-auto border border-dark">third div</div>
+            <div class="col-2 ml-auto border border-dark">fourth div</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+    <!-- nested -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-12 text-center border border-dark">Example to show nested </div>
+            <div class="col-lg col-md col-sm row">
+                <div class="col-lg-6 col-md-4 col-sm border border-dark">LEFT SIDE</div>
+                <div class="col-lg-6 col-md col-sm border border-dark">RIGHT SIDE</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container.fluid bg-dark p-1 my-5"></div>
+ 
+    <!--Grid alignment -->
+    <div class="bg-dark p-1 mb-5 text-light text-center">Grid Alignment</div>
+ 
+    <!--align items at start in y axis-->
+    <div class="container my-2">
+        <div class="row align-items-start text-center py-1" style="height: 150px; border: 1px solid black;">
+            <div class="col border border-dark">align to top</div>
+            <div class="col border border-dark">align to top</div>
+            <div class="col border border-dark">align to top</div>
+            <div class="col border border-dark">align to top</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+
+    <!--align items at center in y axis-->
+    <div class="container my-2">
+        <div class="row align-items-center text-left py-1" style="height: 150px; border: 1px solid black;">
+            <div class="col border border-dark">align to center</div>
+            <div class="col border border-dark">align to center</div>
+            <div class="col border border-dark">align to center</div>
+            <div class="col border border-dark">align to center</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+
+    <!--align items at end in y axis-->
+    <div class="container my-2">
+        <div class="row align-items-end text-right py-1" style="height: 150px; border: 1px solid black;">
+            <div class="col border border-dark">align to bottom</div>
+            <div class="col border border-dark">align to bottom</div>
+            <div class="col border border-dark">align to bottom</div>
+            <div class="col border border-dark">align to bottom</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+
+    <!--align items at start in x axis-->
+    <div class="container my-2">
+        <div class="row " style="height: 150px; border: 1px solid black;">
+            <div class="col border border-dark ">align to start</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+
+    <!--align items at center in x axis-->
+    <div class="container my-2">
+        <div class="row " style="height: 150px; border: 1px solid black;" >
+            <div class="col border border-dark ">align to center</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+
+    <!--align items at end in x axis-->
+    <div class="container justify-content-end my-2">
+        <div class="row  " style="height: 150px; border: 1px solid black;">
+            <div class="col border border-dark ">align to end</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+
+    <!--align indivisual items -->
+    <div class="container my-2">
+        <div class="row text-right py-1" style="height: 150px; border: 1px solid black;">
+            <div class="col align-self-start border border-dark">align to top-left</div>
+            <div class="col align-self-center border border-dark">align to center</div>
+            <div class="col align-self-end border border-dark">align to bottom-right</div>
+        </div>
+    </div>
+    <div class="bg-secondary p-1 m-5"></div>
+
+    <!--content around -->
+    <div class="container my-2">
+        <div class="row justify-content-around py-1" style="height: 150px; border: 1px solid black;">
+            <p class="">content with around</p>
+            <p class=" ">content with around</p>
+        </div>
+    </div>
+    <!--content between -->
+    <div class="container my-2">
+        <div class="row justify-content-between py-1" style="height: 150px; border: 1px solid black;">
+            <p class="">content with between</p>
+            <p class="">content with between</p>
+        </div>
+    </div>
+    <div class="bg-dark p-1 m-5"></div>
+
+   <!--FlexBox -->
+   <div class="bg-dark p-1 mb-5 text-light text-center">Flex Box</div>
+
+   <!-- style tag -->
+    <style>
+        .flex_div_out{
+            height: 150px;
+            background-color: blanchedalmond;
+        }
+        .flex_div_in{
+            padding: 10px;
+            border: 1px black solid;
+        }
+    </style>
+
+    <!-- row wise -->
+   <div class="flex_div_out d-flex ">
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+   </div>
+   <div class="bg-secondary p-1 m-5"></div>
+
+    <div class="flex_div_out d-flex flex-row-reverse">
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+   </div>
+   <div class="bg-secondary p-1 m-5"></div>
+
+    <div class="flex_div_out d-flex justify-content-start">
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+   </div>
+   <div class="bg-secondary p-1 m-5"></div>
+
+    <div class="flex_div_out d-flex justify-content-center">
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+   </div>
+   <div class="bg-secondary p-1 m-5"></div>
+
+    <div class="flex_div_out d-flex justify-content-end">
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+   </div>
+   <div class="bg-secondary p-1 m-5"></div>
+
+    <div class="flex_div_out d-flex justify-content-between">
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+   </div>
+   <div class="bg-secondary p-1 m-5"></div>
+
+    <div class="flex_div_out d-flex justify-content-around">
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+        <div class="flex_div_in">flex</div>
+   </div>
+
+<!-- column wise -->
+<div class="bg-secondary p-1 m-5"></div>
+<div class="flex_div_out d-flex flex-column">
+    <div class="flex_div_in">flex 1</div>
+    <div class="flex_div_in">flex 2</div>
+    <div class="flex_div_in">flex 3</div>
+</div>
+<div class="bg-secondary p-1 m-5"></div>
+
+<div class="flex_div_out d-flex flex-column-reverse">
+    <div class="flex_div_in">flex 1</div>
+    <div class="flex_div_in">flex 2</div>
+    <div class="flex_div_in">flex 3</div>
+</div>
+<div class="bg-secondary p-1 m-5"></div>
+
+<!-- align items  -->
+<div class="flex_div_out d-flex flex-row align-items-start">
+    <div class="flex_div_in">flex 1</div>
+    <div class="flex_div_in">flex 2</div>
+    <div class="flex_div_in">flex 3</div>
+</div>
+<div class="bg-secondary p-1 m-5"></div>
+
+<div class="flex_div_out d-flex flex-row align-items-center">
+    <div class="flex_div_in">flex 1</div>
+    <div class="flex_div_in">flex 2</div>
+    <div class="flex_div_in">flex 3</div>
+</div>
+<div class="bg-secondary p-1 m-5"></div>
+
+<div class="flex_div_out d-flex flex-row align-items-end">
+    <div class="flex_div_in">flex 1</div>
+    <div class="flex_div_in">flex 2</div>
+    <div class="flex_div_in">flex 3</div>
+</div>
+<div class="bg-secondary p-1 m-5"></div>
+
+<div class="flex_div_out d-flex flex-row align-items-strech">
+    <div class="flex_div_in">flex 1</div>
+    <div class="flex_div_in">flex 2</div>
+</div>
+<div class="bg-secondary p-1 m-5"></div>
+
+<!-- align self -->
+<div class="flex_div_out d-flex">
+    <div class="flex_div_in align-self-start">flex 1</div>
+    <div class="flex_div_in align-self-center">flex 2</div>
+    <div class="flex_div_in align-self-end">flex 3</div>
+    <div class="flex_div_in align-self-strech">flex 3</div>
+</div>
+<!-- responsive -->
+<div class="bg-secondary p-1 m-5"></div>
+<div class="flex_div_out d-flex flex-md-column">
+    <div class="flex_div_in">flex 1</div>
+    <div class="flex_div_in">flex 2</div>
+    <div class="flex_div_in">flex 3</div>
+</div>
+
+<div class="bg-dark p-1 m-5"></div>
+
+<!--Carousel-->
+<div class="bg-dark p-1 mb-5 text-light text-center">Carousel Slider</div>
+
+    
+<div class="container">
+    <div class="row">
+        <div class="col-8 m-auto bg-secondary">
+
+            <!-- simple slider-->    
+            <div class="carousel slide m-5" data-ride="carousel" id="slide-simple">
+                <div class="carousel-inner" >
+                    <div class="carousel-item active">
+                        <img src="../../photo_1.jpg"class="d-block img-fluid" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../photo_1.jpg"class="d-block img-fluid" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../photo_1.jpg"class="d-block img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!--slider with controls-->    
+            <div class="carousel slide m-5" data-ride="carousel" id="slide-control">
+                <div class="carousel-inner" >
+                    <div class="carousel-item active">
+                        <img src="../../photo_1.jpg"class="d-block img-fluid" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../photo_1.jpg"class="d-block img-fluid" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../photo_1.jpg"class="d-block img-fluid" alt="">
+                    </div>
+                </div>
+                <a href="#slide-control" class="carousel-control-prev " role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    
+                </a>
+                <a href="#slide-control" class="carousel-control-next " role="button" data-slide="next" >
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    
+                </a>
+            </div>
+
+            <!-- simple carousel-->    
+            <div class="carousel slide m-5" data-ride="carousel" id="slide-simple">
+                <div class="carousel-inner" >
+                    <div class="carousel-item active">
+                        <img src="../../photo_1.jpg"class="d-block img-fluid" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../photo_1.jpg"class="d-block img-fluid" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../photo_1.jpg"class="d-block img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="bg-dark p-1 m-5"></div>
+
+<!-- Collapse and Accordion-->
+<div class="bg-dark p-1 mb-5 text-light text-center">Collapse & Accordion</div>
+
+<a href="" class="m-5 text-light bg-primary p-2" data-toggle="collapse" data-target="#collapse_1">Click to Collapse</a>
+<div id="collapse_1" class="collapse p-1 m-2">
+    <div class="card">
+        <div class="card-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore aliquam eius vel accusamus officiis consequuntur dicta corporis similique sapiente veniam harum possimus culpa incidunt, facere enim ab dignissimos in soluta.
+        </div>
+    </div>
+</div>
+<div class="bg-secondary p-1 m-5"></div>
+
+<!-- Accordion -->
+<div id="Accordion_1" class="container" role="tablist">
+    <div class="card">
+        <div class="card-header" role="tab">
+            <h5>
+                <a href="#collapse_accordion_div1" class="text-dark" data-toggle="collapse" data-parent="#Accordion_1">
+                    Accordion 1
+                </a>
+            </h5>
+        </div>
+        <div id="collapse_accordion_div1" class="collapse">
+            <div class="card-body">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, sint id debitis dolore maxime excepturi doloribus a, atque accusantium quaerat temporibus voluptatibus laudantium non eveniet velit suscipit eum placeat ratione.
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" role="tab">
+            <h5>
+                <a href="#collapse_accordion_div2" class="text-dark" data-toggle="collapse" data-parent="#Accordion_1">
+                    Accordion 2
+                </a>
+            </h5>
+        </div>
+        <div id="collapse_accordion_div2" class="collapse show">
+            <div class="card-body font-weight-bold">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo, incidunt quidem excepturi quibusdam quo porro eos mollitia! Dolores perspiciatis accusamus maiores excepturi nulla expedita ipsum, quod recusandae veniam quibusdam.
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" role="tab">
+            <h5>
+                <a href="#collapse_accordion_div3" class="text-dark" data-toggle="collapse" data-parent="#Accordion_1">
+                    Accordion 3
+                </a>
+            </h5>
+        </div>
+        <div id="collapse_accordion_div3" class="collapse">
+            <div class="card-body font-italic">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, sint id debitis dolore maxime excepturi doloribus a, atque accusantium quaerat temporibus voluptatibus laudantium non eveniet velit suscipit eum placeat ratione.
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="bg-dark p-1 m-5"></div>
+
+<!-- Tooltips-->
+<div class="bg-dark p-1 mb-5 text-light text-center">Tooltips</div>
+
+<div class="container bg-primary d-flex justify-content-around mb-5">
+    <button type="button" class="btn btn-success " data-toggle="tooltip" data-placement="top" title="Top Tooltip">
+        Tooltip_top
+    </button>    
+    <button type="button" class="btn btn-success " data-toggle="tooltip" data-placement="bottom" title="Bottom Tooltip">
+        Tooltip_bottom
+    </button>    
+    <button type="button" class="btn btn-success " data-toggle="tooltip" data-placement="left" title="Left Tooltip">
+        Tooltip_left
+    </button>    
+    <button type="button" class="btn btn-success " data-toggle="tooltip" data-placement="Right" title="Right Tooltip">
+        Tooltip_right
+    </button>    
+</div>    
+<!-- tooltip with data-html:on -->
+<div class="container bg-primary d-flex justify-content-around mb-5">
+    <button type="button" class="btn btn-success " data-toggle="tooltip" data-placement="top" data-html="true" title="<h3>Tooltips</h3><p>with HTML true</p>">
+        Tooltip_html
+    </button>
+</div>    
+<!-- tooltip with show-tooltip -->
+<div class="container bg-primary d-flex justify-content-around mb-5">
+    <button type="button" class="btn btn-success " onclick="showfunc()">
+        Tooltip_show
+    </button>
+    <button id="show" class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="show when showfunc()">
+        tooltip for show
+    </button>
+</div>
+
+<!-- tooltip with hide-tooltip -->
+<div class="container bg-primary d-flex justify-content-around mb-5">
+    <button type="button" class="btn btn-success " onclick="hidefunc()">
+        Tooltip_hide
+    </button>
+    <button id="hide" class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="show when hidefunc()">
+        tooltip for hide
+    </button>
+</div>    
+
+<!-- tooltip with toggle-tooltip -->
+<div class="container bg-primary d-flex justify-content-around mb-5">
+    <button type="button" class="btn btn-success " onclick="togglefunc()">
+        Tooltip_toggle
+    </button>
+    <button id="toggle" class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="show when togglefunc()">
+        tooltip for toggle
+    </button>
+</div>    
+<div class="bg-dark p-1 m-5"></div>
+
+<!-- popovers -->
+
+<div class="bg-dark p-1 mb-5 text-light text-center">popovers</div>
+<div class="container bg-primary d-flex justify-content-around mb-5">
+    <button type="button" class="btn btn-success " data-toggle="popover" data-placement="top" data-content="Hello World" title="Top popovers" >
+        popovers_top
+    </button>    
+    <button type="button" class="btn btn-success " data-toggle="popover" data-placement="bottom" data-content="Hello World" title="Bottom popovers" data-trigger="focus">
+        popovers_bottom
+    </button>    
+    <button type="button" class="btn btn-success " data-toggle="popover" data-placement="left" data-content="Hello World" title="Left popovers">
+        popovers_left
+    </button>    
+    <button type="button" class="btn btn-success " data-toggle="popover" data-placement="Right" data-content="Hello World" title="Right popovers" data-trigger="focus">
+        popovers_right
+    </button>    
+</div>    
+
+<!-- popover with show-popover -->
+<div class="container bg-primary d-flex justify-content-around mb-5">
+    <button type="button" class="btn btn-success" onclick="popover_showfunc()">
+        popover_show
+    </button>
+    <button id="popover_show" class="btn btn-success" data-toggle="popover" data-placement="bottom" title="show when popover_showfunc()" data-content="Helloworld">
+        popover for show
+    </button>
+</div>
+
+<!-- popover with hide-popover -->
+<div class="container bg-primary d-flex justify-content-around mb-5">
+    <button type="button" class="btn btn-success" onclick="popover_hidefunc()">
+        popover_hide
+    </button>
+    <button id="popover_hide" class="btn btn-success" data-toggle="popover" data-placement="bottom" title="show when popover_hidefunc()" data-content="Helloworld">
+        popover for hide
+    </button>
+</div>    
+
+<!-- popover with toggle-popover -->
+<div class="container bg-primary d-flex justify-content-around mb-5">
+    <button type="button" class="btn btn-success" onclick="popover_togglefunc()">
+        popover_toggle
+    </button>
+    <button id="popover_toggle" class="btn btn-success" data-toggle="popover" data-placement="bottom" title="show when popover_togglefunc()" data-content="Helloworld">
+        popover for toggle
+    </button>
+</div>
+<div class="bg-dark p-1 m-5"></div>
+
+<!-- Modal -->
+<div class="bg-dark p-1 mb-5 text-light text-center">model</div>
+<div class="container">
+    <button type="button" class="bg-primary" data-toggle="modal" data-target="#modal1">Modal</button>
+    <div class="modal" id="modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Modal</h3>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem assumenda nobis dolorem soluta expedita! Aspernatur sequi, adipisci perspiciatis blanditiis modi obcaecati corporis dolor distinctio, suscipit nihil cumque esse ipsa aperiam?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident placeat tenetur quia dolore obcaecati omnis ad pariatur reiciendis. Temporibus iste ut eveniet eos molestiae facilis doloremque officiis illum atque a!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nobis perspiciatis iusto, eos debitis sint consequatur ad ratione corrupti fugit quasi molestiae culpa. Dolore exercitationem magni, iusto assumenda rem adipisci.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-secondary p-1 m-5"></div>
+<!--modal for login-->
+<div class="container">
+    <button type="button" class="bg-primary text-light" data-toggle="modal" data-target="#modal_login">Click to Open Login Modal</button>
+    <div class="modal" id="modal_login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login Form</h3>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Enter Password" class="form-control">
+                        </div>
+                    </form>
+                    <div>
+                        <button class="bg-light text-danger" data-dismiss="modal">Close</button>
+                        <button class="bg-light text-success">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light p-5 my-5 container-fluid"></div>
+</body>
+
+<script>
+    $(function(){
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    function showfunc() {
+        $('#show').tooltip('show');
+    }
+    function hidefunc() {
+        $('#show').tooltip('hide');
+    }
+    function togglefunc() {
+        $('#show').tooltip('toggle');
+    }
+    $('#show').on('show.bs.tooltip',function(){
+        console.log('show')
+    })
+    $('#show').on('shown.bs.tooltip',function(){
+        console.log('shown')
+    })
+    $('#show').on('hide.bs.tooltip',function(){
+        console.log('hide')
+    })
+    $('#show').on('hidden.bs.tooltip',function(){
+        console.log('hidden')
+    })
+
+    $(function(){
+        $('[data-toggle="popover"]').popover();
+    })
+    function popover_showfunc() {
+        $('#popover_show').popover('show');
+    }
+    function popover_hidefunc() {
+        $('#popover_show').popover('hide');
+    }
+    function popover_togglefunc() {
+        $('#popover_show').popover('toggle');
+    }
+    
+</script>
+
+</html>

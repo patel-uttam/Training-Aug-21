@@ -1,0 +1,778 @@
+<!-- Bootstrap 1-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Day7 Practice</title>
+</head>
+<body class="container.fluid">
+
+    <header class="container.fluid pt-3 pb-1 mt-5 mb-5 bg-warning sticky-top">
+        <div class="container w-300 font-weight-bold"><p>Day7 Practice</p></div>
+    </header>
+
+    <!-- heading -->
+    <div class="container py-2 px-5 mb-3 bg-dark row ">
+        <h6 class="bg-secondary col-lg-2 col-md-4 col-sm-6 col-xs-6">H1-tag </h6>
+        <h5 class="bg-primary col-lg-2 col-md-4 col-sm-6 col-xs-6">H1-tag </h5>
+        <h4 class="bg-secondary col-lg-2 col-md-4 col-sm-6 col-xs-6">H1-tag </h4>
+        <h3 class="bg-primary col-lg-2 col-md-4 col-sm-6 col-xs-6">H1-tag </h3>
+        <h2 class="bg-secondary col-lg-2 col-md-4 col-sm-6 col-xs-6">H1-tag </h2>
+        <h1 class="bg-primary col-lg-2 col-md-4 col-sm-6 col-xs-6">H1-tag </h1>
+        <p class="col-lg-12 h2 bg-light">heading apply by class </p>
+        <p class="col-lg-12 h5 bg-light">heading apply by class </p>
+    </div>
+
+    <!-- display (size) and alignment-->
+    <div class="container px-1 py-4 mx-4 my-2 text-right bg-primary ">
+        <p class="text-left display-4 bg-light">paragraph 1</p>
+        <p class=" display-3">paragraph 2</p>
+        <p class="text-left display-1 bg-light">paragraph 3</p>
+        <p class=" display-3 ">paragraph 4</p>
+        <p class="text-left display-4 bg-light">paragraph 5</p>
+    </div>
+
+    <!-- list -->
+    <!-- list in inline and bg-->
+    <div class="container px-1 py-4 mx-4 my-2 bg-secondary ">
+        <ul class="container list-inline list-styled">
+            <li class="list-inline-item p-3 mx-2 bg-danger">list 1</li>
+            <li class="list-inline-item p-3 mx-2 bg-danger" >list 2</li>
+            <li class="list-inline-item p-3 mx-2 bg-danger">list 3</li>
+            <li class="list-inline-item p-3 mx-2 bg-danger">list 4</li>
+        </ul>
+
+        <!-- unstype list and color-->
+        <ol class="list-unstyled">
+            <li class="pl-3 text-danger" >list 1</li>
+            <li class="pl-3 text-info">list 2</li>
+            <li class="pl-3 text-danger">list 3</li>
+            <li class="pl-3 text-info">list 4</li>
+        </ol>
+
+    </div>
+
+
+    <section class="container.fluid mx-2 mt-5 bg-secondary text-center row" id="section_main">
+    
+        <!-- breakpoint --> <!-- style --> <!-- text transform-->
+        <div class="col-lg-4 col-md-4 col-sm-12 pt-3 bg-light" >
+            <!-- font weight --> 
+            <p class="font-weight-bold text-lowercase">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur alias necessitatibus, inventore nihil a sequi quibusdam culpa aperiam quis natus, eaque ipsam iusto aliquam? Iure quam cumque doloremque nam!</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pt-3 ">
+            <!-- highlight text-->
+            <p class="mark font-italic text-capitalize" >Lorem Ipsum Dolor sit amet consectetur, adipisicing elit. Optio dignissimos, quis soluta dicta ducimus accusamus iste eum molestiae excepturi labore, maiores vitae, autem assumenda eius? Vel architecto nulla cum. Itaque.</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pt-3 bg-light">
+            <!-- LEAD to make text promminent-->
+            <p class="lead text-uppercase" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nulla cum laborum esse mollitia aperiam voluptatibus vel expedita libero facere quia minus, itaque quaerat quasi. Distinctio qui esse nostrum quas!</p>
+        </div>
+    </section>
+
+    <!-- float -->
+    <div class="container.fluid bg-secondary p-2 mx-2 my-5"></div>
+    <div class="container.fluid float-left ">float left</div><br>
+        <div class="container.fluid float-right ">float right</div><br>
+        <div class="float-none">float none</div>
+        <div class="float-md-right float-lg-left">float right small</div> <br>
+        <div class="float-xl-right">float left not xl</div><br>
+
+    <!-- position -->
+
+        <button class=" fixed-top float-right display-4">p1</button>
+        <button class=" fixed-bottom">p2</button>
+
+    <!-- width and height and border-->
+
+    <div class="m-5 p-2 border border-secondary">
+        <p class="bg-warning w-25">para 1</p>
+        <p class="bg-warning w-50">para 2</p>
+        <p class="bg-warning w-75">para 3</p>
+        <p class="bg-warning w-100">para 4</p>
+        <p>para 5</p>
+    </div>
+    <div style="height: 200px; padding-left: 15px; " class="clearfix">
+        <p class="bg-warning d-inline-block h-25">para 1</p>
+        <p class="bg-warning d-inline-block h-50">para 2</p>
+        <p class="bg-warning d-inline-block h-75">para 3</p>
+        <p class="bg-warning d-inline-block h-100">para 4</p>
+    </div>
+    <div class="bg-light p-5 my-5 "></div>
+    <div class=" bg-light p-5 m-5">
+        <p class="bg-light  w-50 text-center border border-dark">para 1</p>
+        <p class="bg-light  w-50 text-center border border-dark rounded" >para 2</p>
+        <p class="bg-light  w-50 text-center border border-dark rounded-bottom">para 3</p>
+        <p class="bg-light  w-50 text-center border border-dark border-bottom-0">para 4</p>
+        <p class="bg-light  w-50 text-center border border-dark border-left-0 border-right-0 ">para 5</p>
+
+    </div>
+    <div class="bg-dark px-2 py-2 my-5 ">
+        <p class="text-light text-center font-weight-bold">CSS Cmponent</p>
+    </div>
+
+    <!-- buttons and button group-->
+
+
+
+    <div class="bg-dark p-2 my-5 "></div>
+    
+    <!-- navbar -->
+    
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brand</a>
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="text-info nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="text-info nav-link" href="#">Facility</a>
+                </li>
+                <li class="text-info nav-item">
+                    <a class="text-info nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="text-info nav-link" href="#">AboutUS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="bg-light p-2 my-5 "></div>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navul">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navul">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Facility</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">AboutUS</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-light p-2 my-5 "></div>
+
+    <!-- apply nav on list-->
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="#">link 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">link 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">link 3</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">link 4</a></li>
+    </ul>
+    <div class="bg-light p-2 my-5 "></div>
+
+    <!--center-->
+    <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="nav-link" href="#">link 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">link 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">link 3</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">link 4</a></li>
+    </ul>
+
+    <div class="bg-light p-2 my-5 "></div>
+    <!---->
+    <ul class="nav nav-pills justify-content-end ">
+        <li class="nav-item"><a class="nav-link active" href="#">link 1</a></li>
+        <li class="nav-item"><a class="nav-link " href="#">link 2</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">link 3</a></li>
+        <li class="nav-item"><a class="nav-link " href="#">link 4</a></li>
+    </ul>
+    <div class="bg-light p-2 my-5 "></div>
+
+    <ul class="nav nav-fill nav-pills">
+        <li class="nav-item"><a class="nav-link" href="#">link 1</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">link 2</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">link 3</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">link 4</a></li>
+    </ul>
+
+    <div class="bg-light p-2 my-5 "></div>
+
+    <ul class="nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">link 1</a>
+            <div class="dropdown-menu">
+                <a class="nav-link dropdown-item" href="#">link 1</a>
+                <a class="nav-link dropdown-item " href="#">link 2</a>
+                <a class="nav-link dropdown-item " href="#">link 3</a>
+                <a class="nav-link dropdown-item" href="#">link 4</a>
+            </div>
+        
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">link 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">link 3</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">link 4</a></li>
+    </ul>
+
+
+    <div class="bg-dark p-2 my-5 "></div>
+
+    <!-- list group and badges -->
+
+    <!-- list in group-->
+    <ul class="list-group">
+        <!-- list in group-->
+        <li class="list-group-item
+        <!-- list in group--> w-25">list 1</li>
+        <!--action -->
+        <li class="list-group-item list-group-item-action w-25">list 2</li>
+        <!--contexul or bg color -->
+        <li class="list-group-item list-group-item-secondary w-25">list 3</li>
+        <li class="list-group-item list-group-item-dark w-25">list 4</li>
+    </ul>
+
+    <div class="bg-light p-2 my-5"></div>
+
+    <!-- list and it content side-by-side  -->
+    <div class="container row my-3">
+        <div class="col-3">
+            <div class="list-group " role="tablist">
+                <a class="list-group-item list-group-item-action" id="link-group-link 1" data-toggle="list" href="#h1_1">link 1</a>
+                <a class="list-group-item list-group-item-action" id="link-group-link 1" data-toggle="list" href="#h1_2">link 2</a>
+            </div>
+        </div>
+        <div class="col-9 border">
+            <div class="tab-content" id="div_tabcontent">
+                <h3 class="tab-pane show active"  role="tabpanel">Click any of two (link 1 or link 2 to display relative msg in this panel)</h3>
+                <h1 class="tab-pane show" id="h1_1" role="tabpanel">Heading 1 Heading 1 Heading 1 Heading 1 Heading 1 Heading 1 Heading 1</h1>
+                <h1 class="tab-pane show" id="h1_2" role="tabpanel">Heading 2 Heading 2 Heading 2 Heading 2 Heading 2 Heading 2 Heading 2</h1>
+                <h1></h1>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light p-2 my-5"></div>
+
+    <!-- Badge -->
+    <ul class="list-group">
+        <!-- list in group-->
+        <li class="list-group-item w-75 d-flex justify-content-start align-items-center">Ten <span class="badge badge-primary">10</span></li>
+        <!--action -->
+        <li class="list-group-item w-75 d-flex justify-content-end align-items-center">Twenty <span class="badge badge-primary">20</span></li>
+        <!--contexul or bg color -->
+        <li class="list-group-item w-75 d-flex justify-content-center align-items-center">Thirty <span class="badge badge-primary">30</span></li>
+        <li class="list-group-item w-75 d-flex justify-content-between align-items-center">Forty <span class="badge badge-primary">40</span></li>
+    </ul>
+
+    <div class="bg-dark p-2 my-5 "></div>
+
+    <!-- breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#" class="breadcrumb-item">item 1</a>
+        <a href="#" class="breadcrumb-item active">item 1</a>
+    </div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">list 1</li>
+        <li class="breadcrumb-item active">list 2</li>
+    </ol>
+
+    <div class="bg-dark p-2 my-5 "></div>
+
+    <!-- Alert and progress -->
+
+    <!-- alert -->
+    <div class="container alert alert-primary">
+        wait
+    </div>
+
+    <div class="container alert alert-primary">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos id eligendi vitae accusantium adipisci, dolore consequuntur perspiciatis modi laudantium exercitationem, quibusdam harum at sint voluptas. Corporis inventore ea nam modi!<a href="#" class="alert-link">click to continue</a>
+    </div>
+
+    <div class="container alert alert-dark text-warning">
+        Error
+    </div>
+    <div class="container alert alert-danger alert-dismissble ">
+        <button class="close" data-dismiss="alert" type="button">
+            <span>&times;</span>
+        </button>
+        alert with close button
+    </div>
+
+    <div class="bg-light p-2 my-5 "></div>
+
+    <!-- progress -->
+
+    <div class="container progress p-0 mb-5">
+        <div class="progress-bar" style="width: 25%;">25%</div>
+    </div>
+
+    <div class="container progress p-0 mb-5">
+        <div class="progress-bar bg-warning" style="width: 45%;">done</div>
+    </div>
+    <div class="container progress p-0 mb-5">
+        <div class="progress-bar bg-success progress-bar-striped" style="width: 75%;">done</div>
+    </div>
+    <div class="container progress p-0 mb-5">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 85%;">85%</div>
+    </div>
+
+    
+    <div class="bg-dark p-2 my-5 "></div>
+
+    <!-- Table and pagination-->
+
+    <div class="container">
+        <table class="table mb-3">
+            <thead>
+                <tr>
+                    <th>Series</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                </tr>
+            </thead>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Raj</td>
+                    <td>8754652132</td>
+                </tr>
+            <tbody>
+    
+            </tbody>
+        </table>
+        <table class="table table-dark mb-3">
+            <thead>
+                <tr>
+                    <th>Series</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                </tr>
+            </thead>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Raj</td>
+                    <td>8754652132</td>
+                </tr>
+            <tbody>
+    
+            </tbody>
+        </table>
+        <table class="table mb-3">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Series</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                </tr>
+            </thead>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Raj</td>
+                    <td>8754652132</td>
+                </tr>
+            <tbody>
+    
+            </tbody>
+        </table>
+    </div>
+    <table class="table table-striped mb-3">
+        <thead>
+            <tr>
+                <th>Series</th>
+                <th>Name</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+    <table class="table table-bordered mb-3">
+        <thead>
+            <tr>
+                <th>Series</th>
+                <th>Name</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+    <table class="table table-borderless table-dark mb-3">
+        <thead>
+            <tr>
+                <th>Series</th>
+                <th>Name</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+    <table class="table table-hover mb-3">
+        <thead>
+            <tr>
+                <th>Series</th>
+                <th>Name</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+    <table class="table table-sm mb-3">
+        <caption class="table-warning text-center">Table</caption>
+        <thead>
+            <tr>
+                <th class="table-info">Series</th>
+                <th>Name</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+            <tr>
+                <th scope="row" class="table-secondary">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td class="table-active">Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td class="table-dark">8754652132</td>
+            </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-responsive-md mb-3">
+        <caption class="table-warning text-center">Table with responsive at 'md'</caption>
+        <thead>
+            <tr>
+                <th class="table-info">Series</th>
+                <th>Name</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+            <tr>
+                <th scope="row" class="table-secondary">1</th>
+                <td>Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td class="table-active">Raj</td>
+                <td>8754652132</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Raj</td>
+                <td class="table-dark">8754652132</td>
+            </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <div class="bg-dark p-2 my-5 "></div>
+
+    <!-- card -->
+    <div class="container mb-3">
+        <div class="card">
+            <h3 class="card-header">Header</h3>
+            <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, vitae illum? Obcaecati aperiam facere culpa mollitia. Consequuntur, voluptatem labore ipsum odit neque totam reprehenderit cum voluptates saepe, maiores doloremque expedita!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste vero autem aperiam, tempora minima quia odio ratione quidem vitae quam assumenda quis molestiae id voluptatibus modi dolor eos laboriosam?
+            </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="card">
+            <h3 class="card-header">Header</h3>
+            <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, vitae illum? Obcaecati aperiam facere culpa mollitia. Consequuntur, voluptatem labore ipsum odit neque totam reprehenderit cum voluptates saepe, maiores doloremque expedita!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste vero autem aperiam, tempora minima quia odio ratione quidem vitae quam assumenda quis molestiae id voluptatibus modi dolor eos laboriosam?
+            </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="card ">
+            <h3 class="card-header">Header</h3>
+            <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, vitae illum? Obcaecati aperiam facere culpa mollitia. Consequuntur, voluptatem labore ipsum odit neque totam reprehenderit cum voluptates saepe, maiores doloremque expedita!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste vero autem aperiam, tempora minima quia odio ratione quidem vitae quam assumenda quis molestiae id voluptatibus modi dolor eos laboriosam?
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div class="container col-md-12 col-sm-6">
+            <div class="card">
+                <h3 class="card-header">Header with responsive</h3>
+                <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, vitae illum? Obcaecati aperiam facere culpa mollitia. Consequuntur, voluptatem labore ipsum odit neque totam reprehenderit cum voluptates saepe, maiores doloremque expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste vero autem aperiam, tempora minima quia odio ratione quidem vitae quam assumenda quis molestiae id voluptatibus modi dolor eos laboriosam?
+                </div>
+            </div>
+        </div>
+        <div class="container col-md-12 col-sm-6">
+            <div class="card ">
+                <h3 class="card-header">Header</h3>
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, vitae illum? Obcaecati aperiam facere culpa mollitia. Consequuntur, voluptatem labore ipsum odit neque totam reprehenderit cum voluptates saepe, maiores doloremque expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste vero autem aperiam, tempora minima quia odio ratione quidem vitae quam assumenda quis molestiae id voluptatibus modi dolor eos laboriosam?
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fade show" href="#">link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" >Disable link</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">title</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab laudantium repellendus, nam fuga corporis omnis tenetur accusamus optio corrupti minima, nostrum voluptatibus, in ad neque totam accusantium velit sequi saepe!</p>
+          
+        </div>
+      </div>
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link " href="#">Active link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fade " href="#"> fadeed link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" >link</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">title 2</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab laudantium repellendus, nam fuga corporis omnis tenetur accusamus optio corrupti minima, nostrum voluptatibus, in ad neque totam accusantium velit sequi saepe!</p>
+          
+        </div>
+      </div>
+
+      <div class="bg-dark p-2 my-5 "></div>
+
+    <!-- form -->
+
+    <div class="container">
+        <form class="form">
+            <h4>Sign Up</h4>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Password">Password :</label>
+                <input type="Password" id="Password" name="Password" class="form-control">
+            </div>
+    
+        </form>
+        <div class="bg-secondary p-2 my-5 "></div>
+        <form class="form">
+            <h4>Sign Up</h4>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" class="form-control form-control-lg">
+            </div>
+            <div class="form-group">
+                <label for="Password">Password :</label>
+                <input type="Password" id="Password" name="Password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="file">file :</label>
+                <input type="file" id="file" name="file" class="form-control-file">
+            </div>
+            <div class="form-group">
+                <input type="submit" id="submit" name="submit" class="btn bg-primary">
+            </div>
+        </form>
+        <div class="bg-secondary p-2 my-5 "></div>
+        <!-- check -->
+        <form>
+            <h5>Select Course</h5>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" value="Course" class="form-check-input">
+                    Python
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" value="Course" class="form-check-input">
+                    JavaScript
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" value="Course" class="form-check-input">
+                    .NET
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    .NET
+                </label>
+            </div>
+        </form>
+        <div class="bg-secondary p-2 my-5 "></div>
+        <!-- inline -->
+        <form class="form-inline">
+            <h5>Select Course</h5>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" value="Course" class="form-check-input">
+                    Python
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" value="Course" class="form-check-input">
+                    JavaScript
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" value="Course" class="form-check-input">
+                    .NET
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    .NET
+                </label>
+            </div>
+        </form>
+        <div class="bg-secondary p-2 my-5 "></div>
+        <!-- validation -->
+        <form class="form">
+            <h4>Sign Up</h4>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" class="form-control form-control-lg is-valid">
+            </div>
+            <div class="form-group">
+                <label for="Password">Password :</label>
+                <input type="Password" id="Password" name="Password" class="form-control is-invalid">
+            </div>
+            <div class="form-group">
+                <label for="Password">Confirm Password :</label>
+                <input type="Password" id="Password" name="Password" class="form-control is-invalid">
+            </div>
+            <div class="text-danger" >Password not match</div>
+            <div class="form-group">
+                <label for="file">file :</label>
+                <input type="file" id="file" name="file" class="form-control-file">
+            </div>
+            <div class="form-group">
+                <input type="submit" id="submit" name="submit" class="btn bg-primary">
+            </div>
+        </form>
+
+
+    </div>
+
+    <div class="bg-light p-5 my-5 "></div>
+</body>
+</body>
+</html>
