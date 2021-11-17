@@ -219,7 +219,7 @@ cost of the meal, quantity ordered and the total line total (calculated field an
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 
-	SELECT o.OrderID , o.OrderDate , m.FirstName, m.LastName , c.CampusName , fi.FoodItemName , p.MealType , p.MealPrice , ol.Quantity , SUM(p.MealPrice) , SUM(ol.Quantity) ,GROUPING_ID(p.MealPrice) as 'TotalPrice' , GROUPING_ID(ol.Quantity) as 'Total Quantity' FROM OrderLine as ol
+	SELECT o.OrderID , o.OrderDate , m.FirstName, m.LastName , c.CampusName , fi.FoodItemName , p.MealType , p.MealPrice , ol.Quantity , SUM(p.MealPrice) as 'Total Price', SUM(ol.Quantity) as 'Total Quantity' ,GROUPING_ID(p.MealPrice) as 'price_grouping' , GROUPING_ID(ol.Quantity) as 'Quantity_grouping' FROM OrderLine as ol
 	join Orders as o
 	ON o.OrderID = ol.OrderID
 	JOIN Members as m

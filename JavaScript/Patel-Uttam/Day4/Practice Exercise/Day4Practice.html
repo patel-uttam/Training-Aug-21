@@ -1,0 +1,104 @@
+<!-- Practice Exercise -->
+<!--
+    1.Define a function called callback which receives an argument and prints the square of that number.
+    
+    2.Explain difference between var and let keyword using example. 
+    
+    3.Make a function that takes in a single parameter and returns a 
+     new promise. using setTimeout, after 500 milliseconds, the promise
+     will either resolove or reject. if the input is a string, the promise
+     resolves with that reverse string . if the input is anything but a 
+     string it rejects with that same input call the function wrong Input.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 Practice</title>
+</head>
+<body>
+    <div>
+        <p>Practice 1</p>
+        <input type="number" id="num1" placeholder="Enter num1"><br>
+        <button onclick="square_call()">click to check square of number</button><br><br>
+        <h3 id="result_sqaure"></h3>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div>
+        <p>Practice 2</p>
+
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div>
+        <p>Practice 3</p>
+    </div>
+</body>
+<script>
+
+    // Practice 1
+    function square(num1,callback)
+    {
+        callback(num1*num1);
+    }
+    function square_call(){
+        let num1 = parseInt(document.getElementById("num1").value);
+        square(num1,(result)=>{
+            document.getElementById("result_sqaure").innerHTML = "Square of number is : " +result;
+        })
+        square
+    }
+
+    // Practice 2
+    var var1 = "Patel";
+    let let1 = "Uttam";
+
+    function datatype_ex()
+    {
+        var var1 = "Uttam";
+        let let1 = "Patel";
+        console.log("var inner " + var1 + "  let inner " + let1);   
+    }
+    console.log("var outer " + var1 + " let outer " + let1);
+    var var1 = "asdfgh";
+    // let let1 = "asdfgh";
+    console.log("var outer " + var1 + " let outer " + let1);
+
+    var var2 = 50;
+    let let2 = 50;
+    const const1 = "constant";
+    var2 = "asdfgh";
+    let2 = "asdfgh";
+    // const1 = 50;
+    console.log("var outer " + var2 + " let outer " + let2);
+    console.log("constant  " + const1);
+
+    // Practice 3
+    function check_string(str)
+    {   
+        
+        return new Promise((resolve,reject)=>{
+           if(typeof str == typeof "String")
+            {
+                let resolve_msg = str.split("").reverse().join("");
+                setTimeout(() => {
+                    console.log(resolve_msg); 
+                }, 500);
+            }
+            else
+            {   
+                let reject_msg =str;
+                reject(str);
+            }
+        });
+        
+    }
+    </script>
+</html>

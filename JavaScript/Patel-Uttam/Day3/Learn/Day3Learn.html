@@ -1,0 +1,53 @@
+<!-- Learn -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Day3 Learn</title>
+</head>
+<body>
+    <div id="active_element_div" class="container border">
+        <h3>Day3 Learn</h3>
+        <input class="form-control m-10" type="text" value="Move Over mouse">
+        <button class="btn btn-primary">Click</button>
+        <p id="active_element"></p>
+    </div>
+    <div id="eventlistener_div" class="container border">
+        <h3>Day3 Learn</h3>
+        <input class="form-control m-10" type="text" value="Move Over mouse">
+        <button class="btn btn-primary">Click</button>
+        <p id="eventlistener"></p>
+    </div>
+    <div id="base_URI"class="container">
+        <p id="base_URI_p"></p>
+    </div>
+    <div id="create_element_div" class="container">
+
+    </div>
+</body>
+<script>
+    /* DOM Elements */
+    // activeElement
+    document.getElementById("active_element").innerHTML=document.activeElement.tagName;
+    //AddEvent
+    document.addEventListener("click",function(){
+        document.getElementById("eventlistener").innerHTML=document.activeElement.tagName;
+    });
+    //baseURI
+    document.getElementById("base_URI_p").innerHTML=document.baseURI;
+    //createElement and appendChild and createtextnode
+    var p = document.createElement("P");
+    var text = document.createTextNode("Tag created Runtime.")
+    var append_p = p.appendChild(text);
+    document.getElementById("create_element_div").appendChild(append_p);
+    //
+
+</script>
+</html>

@@ -1,0 +1,139 @@
+<!-- Practice Exercise -->
+<!--
+-Write a JavaScript function to check whether a string is blank or not
+-Write a JavaScript function to split a string and convert it into an array of words
+-Write a JavaScript function to extract a specified number of characters from a string.
+-Write a JavaScript function to get the current date
+-Try some operation with list like push, pop, shifting, deleting element
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Day2 Practice</title>
+</head>
+<body>
+    <div class="container p-3 m-3 border border-primary w-25 ">
+        <h4>task 1</h4>
+        <label for="str">Enter String</label>
+        <input type="text" id="str_isnull" name="str" class="form-control"><br>
+        <button name="btnstr" type="button" class="btn btn-warning" onclick="check_str_isnull()">Click to check</button> 
+        <p class="text-danger mt-2" id="check_str_isnull"></p>   
+    </div>
+    <div class="container p-3 m-3 border border-primary ">
+        <h4>task 2</h4>
+        <label for="str">Enter String</label>
+        <input type="text" id="str_split" name="str" placeholder="string with delimeter like ('.',',','-'...)" class="form-control"><br>
+        <input type="text" id="str_split_delimeter" name="str" placeholder="Enter delimeter you use" class="form-control"><br>
+        <button name="btnstr" type="button" class="btn btn-warning" onclick="check_str_split()">Click to split string</button>
+        <p class="text-danger mt-2" id="check_str_split"></p> 
+    </div>
+    <div class="container p-3 m-3 border border-primary ">
+        <h4>task 3</h4>
+        <label for="str">Enter String</label>
+        <input type="text" id="str_substr" name="str" class="form-control"><br>
+        <input type="number" id="str_substr_length" name="str" placeholder="Enter length" class="form-control"><br>
+        <button name="btnstr" type="button" class="btn btn-warning" onclick="check_str_substr()">Click to substring string</button>
+        <p class="text-danger mt-2" id="check_str_substr"></p> 
+    </div>
+    <div class="container p-3 m-3 border border-primary ">
+        <h4>task 4</h4>
+        <button name="btnstr" type="button" class="btn btn-warning" onclick="get_date()">Click to get current_date</button>
+        <p class="text-danger mt-2" id="get_date"></p> 
+    </div>
+    <div class="container p-3 m-3 border border-primary ">
+        <h4>task 5</h4>
+        <label for="str">Enter String</label>
+        <input type="text" id="arr" name="arr" class="form-control"><br>
+        <button name="btnstr" type="button" class="btn btn-warning" onclick="array_pop()">pop element</button>
+        <button name="btnstr" type="button" class="btn btn-warning" onclick="array_push()">push element</button>
+        <button name="btnstr" type="button" class="btn btn-warning" onclick="array_shift()">shift element</button>
+        <button name="btnstr" type="button" class="btn btn-warning" onclick="array_unshift()">unshift element</button>
+        <button name="btnstr" type="button" class="btn btn-warning" onclick="array_delete()">delete element </button>
+        <p class="text-danger mt-2" id="array_value"></p> 
+    </div>
+
+</body>
+<script>
+    function check_str_isnull()
+    {
+        var str = document.getElementById("str").value;
+        if(str.length==0)
+        {
+            document.getElementById("check_str_isnull").innerHTML="String is not NULL.";
+        }
+        else
+        {
+            document.getElementById("check_str_isnull").innerHTML="String is NULL.";        }
+    }
+
+    function check_str_split()
+    {
+        var str = document.getElementById("str_split").value;
+        var str_delimeter = document.getElementById("str_split_delimeter").value;
+        var str_split = str.split(str_delimeter);
+        document.getElementById("check_str_split").innerHTML = str_split;
+    }
+    function check_str_substr()
+    {
+        var str = document.getElementById("str_substr").value;
+        var str_len = document.getElementById("str_substr_length").value;
+        var str_substr = str.substr(0,str_len);
+        document.getElementById("check_str_substr").innerHTML = str_substr;
+    }
+    function get_date()
+    {
+        var date = new Date;
+        console.log(date);
+        document.getElementById("get_date").innerHTML = date;
+    }
+
+    // array is predefine
+    var arr = new Array("Mango" , "Banana" , "Orange" , "pineapple")
+    function array_pop()
+    {
+        var arr_op = arr.pop();
+        document.getElementById("array_value").innerHTML = arr
+    }
+    function array_push()
+    {
+        var array_value = document.getElementById("arr").value;
+        var arr_op = arr.push(array_value);
+        document.getElementById("array_value").innerHTML = arr
+    }
+    function array_shift()
+    {
+        var array_value = document.getElementById("arr").value;
+        var arr_op = arr.shift();
+        document.getElementById("array_value").innerHTML = arr
+    }
+    function array_unshift()
+    {
+        var array_value = document.getElementById("arr").value;
+        var arr_op = arr.unshift(array_value);
+        document.getElementById("array_value").innerHTML = arr
+    }
+    function array_delete()
+    {   
+        var array_value = document.getElementById("arr").value;
+        var len;
+        for(var i=0;i<arr.length;i++)
+        {
+            if(arr[i]==array_value)
+            {
+                len=i;
+            }
+        }
+        delete arr[len];
+        document.getElementById("array_value").innerHTML = arr
+    }
+</script>
+</html>

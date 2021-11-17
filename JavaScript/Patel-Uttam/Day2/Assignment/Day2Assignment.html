@@ -1,0 +1,104 @@
+<!-- Assignment -->
+<!--
+-Date entered by the user should be checked for whether it is a Valid Date or not.
+-Entered date should be in “”MM-DD-YYYY”” format. Display the Date Format along with the Text Box.
+-You are required to perform following checks :
+    Entered characters should be digits only.
+    Month should be within the range 1 to 12.
+    Days should be within the range 1 to 31.
+-Check the entered Days and its corresponding Month.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Day2 Assignment</title>
+</head>
+<body>
+    <h4>Day2 Assignment</h4>
+    
+	<div class="container m-5 bg-secondary border border-info w-25">
+		<label class="" for="date_value">Enter Date</label>
+		<input class="form-control w-75 m-0 border-info" type="text" id="date_value" name="date"><br>
+		<p class="text-light font-size-bold  mb-3">Date Format should be like MM/DD/YYYY</p>
+		<button class="btn btn-dark mb-5" type="button" onclick="is_Date_valid()">Check Date</button>
+		<h4 class="text-danger" id="result"></h4>
+	</div>
+</body>
+<script type="text/javascript">
+	
+	function is_Date_valid()
+	{
+		var date = document.getElementById("date_value").value;
+		var date_values = date.split("/");
+		var dd = date_values[1];
+		var mm = date_values[0];
+		var yyyy = date_values[2];
+
+        if(date.length == 0)
+        {
+            alert("Enter the date first in given format")
+        }
+		else
+		{
+			if((mm<1 || mm>12) || (dd<1 || dd>31) || (yyyy<1000 || yyyy>9999))
+			{
+				if(yyyy<1000 || yyyy>9999)
+				{
+					document.getElementById("result").innerHTML = "Please enter 'year' between 1000 to 9999";
+				}
+				if(dd<1 || dd>31)
+				{
+					document.getElementById("result").innerHTML = "Day can't be less-than 1 and greater-than 31."+" \"("+dd+" not valid for day)\"";
+				}
+				if(mm<1 || mm>12)
+				{
+					document.getElementById("result").innerHTML = "month can't be less-than 1 and greater-than 12."+" \"("+mm+" not valid for month)\"";
+				}
+			}
+			else
+			{
+				if(mm==2)
+				{
+					if ( ((yyyy%400 == 0)||(yyyy%4 == 0 && yyyy%100 != 0) )&& (dd>=1 && dd<30))
+					{
+						document.getElementById("result").innerHTML = "Date is valid";		 	
+					}
+					else if (dd>=1 && dd<29)
+					{
+						document.getElementById("result").innerHTML = "Date is valid";
+					}
+					else
+					{
+						document.getElementById("result").innerHTML = "Date is invalid";
+					}
+				}
+				else if ((mm == 4 || mm == 6 || mm == 9 || mm == 11) && (dd>=1 && dd<31)) 
+				{
+					document.getElementById("result").innerHTML = "Date is valid";
+				}
+				else if((mm == 1 || mm == 3 || mm == 5 || mm == 7 || mm == 8 || mm == 10 || mm == 12) && (dd>=1 && dd<32))
+				{
+					document.getElementById("result").innerHTML = "Date is valid";
+				}
+				else
+				{
+					document.getElementById("result").innerHTML = "Date is invalid";
+				}
+			}
+
+		}
+	}
+</script>
+
+</html>
+

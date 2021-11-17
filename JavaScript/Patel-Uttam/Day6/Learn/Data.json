@@ -1,0 +1,23 @@
+{
+    "headers" : 
+    [
+        "Name",
+        "Email"
+    ]
+,
+    "rows" : 
+    [
+        [
+            "Uttam",
+            "abc@xyz.com"
+        ],
+        [
+            "Jinesh",
+            "asd@123.com"
+        ],
+        [
+            "Keyur",
+            "qwe@asd.com"
+        ]
+    ]
+}

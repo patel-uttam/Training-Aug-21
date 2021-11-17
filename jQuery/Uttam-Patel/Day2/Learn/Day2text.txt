@@ -1,0 +1,9 @@
+<div>
+      <p id="p1">this paragraph has id "p1" loaded by load method into div_load_1. </p>
+      <p id="p2">this paragraph has id "p2" loaded by load method into div_load_1. </p>
+</div>
+
+<div id="div_">
+      <p id="p1_">this paragraph has id "p1_" loaded by load method into div_load_2. </p>
+      <p id="p2_">this paragraph  has id "p2_" loaded by load method into div_load_2. </p>
+</div>

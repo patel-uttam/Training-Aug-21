@@ -1,0 +1,171 @@
+// Learn.
+
+<!--
+JavaScript : JavaScript is programming language.
+             Mostly it use in client-side application to make interactive and dynamic responsive application.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1 Learn</title>
+</head>
+<body>
+    <h4 id="tagh4">Day1 JavaScript</h4>
+    <button onclick="content_change_tagh4()">Click to change</button>
+    <p id="tagp">it's p tag</p>
+    <button onclick="content_change_tagp()">Click to change</button>
+
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut est ut, consequuntur, fugiat magni tempore adipisci, veritatis minima quod porro repellat reprehenderit accusantium dolorem excepturi in doloremque facere sit repudiandae.</p>
+    <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur quae voluptate provident quod quas expedita praesentium a eligendi illo aliquam, voluptates dolorum tempora vero aliquid harum eveniet, accusantium amet cumque.1</p>
+    <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iure et quae voluptatibus beatae odio nesciunt rem commodi laudantium voluptate aut. Quod iusto expedita consequuntur minus, quasi doloremque recusandae impedit.</p>
+    <button onclick="content_change_p()">change color of all p tag</button>
+</body>
+<script>
+    // Variables and data type
+var variable_1 = 900;   //number
+console.log(variable_1);
+console.log(typeof variable_1);
+
+var variable_1 = 900.99 ;   //number
+console.log(variable_1);
+console.log(typeof variable_1);
+
+var variable_2;     //undefine
+console.log(variable_2);
+console.log(typeof variable_2);
+
+var variable_3 = "string";      //string
+console.log(variable_3);
+console.log(typeof variable_3);
+
+var variable_4 = true;      //boolen
+console.log(variable_4);
+console.log(typeof variable_4);
+
+var variable_5 = [12,14,16,18,20];      //object
+console.log(variable_5);
+console.log(typeof variable_5);
+
+var variable_6 = {Name:"Mike",number:7082};     //object
+console.log(variable_6);
+console.log(typeof variable_6);
+
+
+//Function
+
+function function_1()       //simple func without para
+{
+    console.log("Hello World")
+}
+function_1();
+
+function square(num1)       //simple func with single para
+{
+    console.log("square of "+num1+" is "+num1*num1);
+}
+square(5);
+
+function area(num1,num2)       //simple func with more than single para
+{
+    console.log("area of rectangle is "+num1*num2);
+}
+area(10,20);
+
+function area_return(num1,num2)        //simple func with return
+{
+    return (num1*num2);
+}
+var value = area_return(10,20);
+console.log("area_retrun function return ans "+value)
+
+
+// if/else condition
+function ifelse()
+{
+    var str = "Hello";
+    if(str=="Hello")
+    {
+        console.log(true);
+    }
+    else
+    {
+        console.log(false);
+    }
+}
+ifelse();
+
+// for
+function forloop()
+{
+    for(var i=0 ;i<5;i++)
+    {
+        console.log(i);
+        console.log("\n");
+        
+    }
+}
+forloop();
+
+// in
+function forin()
+{
+    var obj = ["apple","mango","pineapple","cherry"];
+    for (x in obj)
+    {
+        console.log(obj[x])
+    }
+}
+forin();
+
+// while
+function whileloop()
+{
+    var obj = ["apple","mango","pineapple","cherry"];
+    while(obj.length!=0)
+    {
+        console.log("while condition true : "+obj);
+        obj.pop();
+    }
+}
+whileloop();
+
+// array
+
+function arr()
+{
+    var arr1 =[];
+    arr1[0]="hello";
+    arr1[1]="world";
+
+    var arr2 = ["Hi","world"]
+
+    var arr3 = new Array("Good","Day");
+    console.log(arr1 +"  "+arr2 +"  "+arr3)
+}
+arr();
+
+// update content in html
+
+function content_change_tagh4()
+{
+    document.getElementById("tagh4").innerHTML="Day1 Learn after button click";
+}
+function content_change_tagp()
+{
+    document.getElementById("tagp").innerHTML="it's p tag after click";
+}
+function content_change_p()
+{
+    var value = document.getElementsByTagName("P");
+    value[0].style.color = "red"
+    value[1].style.color = "green"
+    value[2].style.color = "blue"
+    value[3].style.color = "yellow"
+    
+}
+</script>
+</html>

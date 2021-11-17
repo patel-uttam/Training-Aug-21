@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2 Learn</title>
+</head>
+<body>
+    <h1>String</h1>
+    
+    <br><br>
+    <hr>
+    <br><br>
+
+</body>
+<script>
+
+    /* String */
+    var str1 = "it's string in double qoute";    //double quote
+    var str2 = 'it\'s string it\'s string it\'s STRING';   //single qoute  ' \ use to avoid next qoute'
+    var str3 = "name1.name2.name3.name4.name5";
+
+    //length
+    var str_len = str1.length;
+    console.log(str_len);
+
+    //slice
+    var str_slice_1 = str1.slice(5,12);
+    console.log(str_slice_1);
+
+    var str_slice_2 = str1.slice(-25,-6);
+    console.log(str_slice_2);
+
+    var str_slice_3 = str1.slice(15,);
+    console.log(str_slice_3);
+
+    //substring
+    var str_substring_1 = str1.substring(5,12);
+    console.log(str_substring_1);
+
+    var str_substring_2 = str1.substring(-25,-6);   // negative index not work return's nothing
+    console.log(str_substring_2);
+
+    var str_substring_3 = str1.substring(15,);
+    console.log(str_substring_3);
+
+    //substr
+    var str_substr_1 = str2.substr(5,12);
+    console.log(str_substr_1);
+
+    var str_substr_2 = str2.substr(-25,24); 
+    console.log(str_substr_2);
+
+    var str_substr_3 = str2.substr(15,2);
+    console.log(str_substr_3);
+
+    // replace
+    var str_replace_1 = str2.replace('string','array of char'); //replace only first match.
+    console.log(str_replace_1);
+
+    var str_replace_2 = str2.replace(/string/g,'array of char'); //regular-Expression g for applying changing to all match. 
+    console.log(str_replace_2);
+
+    var str_replace_3 = str2.replace(/string/ig,'array of char'); //regular-Expression i for applying changing to all match to case-insensitive.
+    console.log(str_replace_3);
+
+    // uppercase , lowercase
+    var str_replace_1 = str2.toUpperCase(); //replace only first match.
+    console.log(str_replace_1);
+    var str_replace_1 = str2.toLowerCase(); //replace only first match.
+    console.log(str_replace_1);
+
+    // Concat
+    var name1 = "Arsene";
+    var name2 = "Lupin";
+    console.log("".concat(name1," ",name2));
+
+    //AtIndex
+    var str_charat_1 = str2.charAt(5);
+    console.log(str_charat_1);
+    var str_charat_2 = str2.charCodeAt(5);
+    console.log(str_charat_2);
+    var str_indexof_1 = str2.indexOf('string');
+    console.log(str_indexof_1);
+    var str_indexof_2 = str2.indexOf('string',10);
+    console.log(str_indexof_2);
+    var str_lastindexof_1 = str2.lastIndexOf('string');
+    console.log(str_lastindexof_1);
+    var str_lastindexof_2 = str2.lastIndexOf('string',12);
+    console.log(str_lastindexof_2);
+    
+    //split
+    var str_split = str3.split('.');
+    console.log(str_split);
+
+    //trim
+    var trim_ = "    'name'    "
+    var str_split = trim_.trim();
+    console.log(str_split);
+
+    /* Date */
+
+    //Date format
+    var date_0 = new Date(); 
+    console.log(date_0)
+    var date_01 = new Date("2022-04"); 
+    console.log(date_01)
+
+    //getdate
+    var date_1 = new Date(); 
+    console.log(date_1.getDate())
+    //getday
+    var date_2 = new Date(); 
+    console.log(date_2.getDay())
+    //getmonth
+    var date_3 = new Date(); 
+    console.log(date_3.getMonth())
+    //getminutes
+    var date_4 = new Date(); 
+    console.log(date_4.getMinutes())
+    //gethours
+    var date_5 = new Date(); 
+    console.log(date_5.getHours())
+    //getseconds
+    var date_6 = new Date(); 
+    console.log(date_6.getSeconds())
+    //gettime
+    var date_7 = new Date(); 
+    console.log(date_7.getTime())
+    //getUTC
+    var date_8 = new Date(); 
+    console.log(date_8.getUTCHours())
+    var date_9 = new Date(); 
+    console.log(date_9.getUTCMilliseconds())
+    var date_1 = new Date(); 
+    console.log(date_1.getUTCHours())
+    //getFullYear
+    var date_10 = new Date(); 
+    console.log(date_10.getFullYear())
+    //setFullYear
+    var date_11 = new Date();
+    date_11.setFullYear(2020)
+    console.log(date_11)
+    //setMonth
+    var date_12 = new Date();
+    date_12.setMonth(1,28)
+    console.log(date_12)
+
+
+    /* Regular-Expression*/
+
+    //search
+    var regexp_1 = "Hello World , it's Regular Expression";
+    regexp_11 = regexp_1.search(/it's/);
+    console.log(regexp_11)
+
+    //test
+    var regexp_2 = "Hello World , it's Regular Expression";
+    regexp_21 = /it's/.test(regexp_2);
+    console.log(regexp_21)
+
+    /* Array */
+    var arr = new Array("Mango" , "Banana" , "Orange" , "pineapple")
+
+    //pop
+    var arr_op1 = arr.pop();
+    console.log(arr);
+    //push
+    var arr_op2 = arr.push("Kiwi");
+    console.log(arr);
+    //concat
+    var arr_2 = new Array("Merge1" , "Merge2" , "Merge3")
+    var arr_op3 = arr.concat(arr_2);
+    console.log(arr_op3);
+    //splice
+    var arr_op4 = arr.splice(1,1);
+    console.log(arr_op4);
+    //shift
+    var arr_op5 = arr.shift();
+    console.log(arr);
+    //unshift
+    var arr_op6 = arr.unshift("Mango");
+    console.log(arr);
+    //delete
+    delete arr[0]
+    console.log(arr);
+</script>
+</html>

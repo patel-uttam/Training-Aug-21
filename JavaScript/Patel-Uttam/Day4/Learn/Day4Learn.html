@@ -1,0 +1,117 @@
+<!-- Learn -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 Learn</title>
+</head>
+<body onload="loadscript()">
+    <div>
+        <p>Sum Calculate</p>
+        <label for="num1">First Value</label><br>
+        <input type="number" id="num1" name="num1"><br>
+        <label for="num2">Second Value</label><br>
+        <input type="number" id="num2" name="num2"><br><br>
+        <button onclick="sum_call()">Sum</button>
+    </div>
+    <h3 id="sum_result"></h3>
+    <h3 id="mul_result"></h3>
+</body>
+<script>
+    // callback //
+    // 1 
+    let def_script;
+    function loadscript(src,callback)
+    {
+        let def_script = document.createElement("script");
+        def_script.src = "ExternalScriptFile.js"
+        document.head.appendChild(def_script);
+    }
+    function callback_ex()
+    {
+        let def_h2;
+        def_h2=document.createElement("h2");
+        def_h2.innerHTML = "Script tag added in head part";
+        document.body.appendChild(def_h2);
+    }
+    loadscript("ExternalScriptFile.js",callback_ex());
+    
+    // 2
+
+    
+    function sum(num1 , num2 ,callback)
+    {
+    callback(num1 + num2);
+    }
+
+    function  sum_call()
+    {
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        sum(num1,num2,(c)=>{
+        document.getElementById("sum_result").innerHTML = c;
+        console.log(c);
+    });
+
+    }
+    // promises //
+
+    let promises = new Promise((resolve,reject) => {
+        var num1 = 7;
+         var result_resolve = "yes , number is even";
+         var result_reject = "No, number is not even";
+         if(num1 % 2 == 0)
+         {
+            resolve(result_resolve);
+         }
+         else
+        {
+            reject(result_reject);  
+        }
+    });
+
+    promises.then((result_resolve)=>{
+        console.log(result_resolve);
+    },
+    (result_reject)=>{
+        console.log(result_reject);
+    });
+
+    // Async and wait
+    async function arrow_func(){
+        var prom1 = new Promise((resolve,reject)=>{
+            let prom1_resolve = "resolvee";
+            let prom1_reject = "rekevctt";
+            if(8<6){
+                resolve(prom1_resolve);
+            }
+
+        });
+        var prom2 = new Promise((resolve,reject)=>{
+            let prom2_resolve = "resolvee";
+            let prom2_reject = "rekevctt";
+            if(7 % 2 == 0){
+                resolve(prom2_resolve);
+            }
+
+        
+        });
+        // prom1.then((prom1_resolve)=>{console.log(prom1_resolve);},(prom1_reject)=>{console.log(prom1_reject);});        // individual
+        // console.log(await prom2);
+             
+
+        // let all_await_result = await Promise.all([prom1,prom2]);    // Promise.all
+        let any_await_result = await Promise.any([prom1,prom2]);
+            // console.log("all_promise fullfilled");
+        // console.log(all_await_result);
+        console.log(any_await_result);
+
+    }
+
+    arrow_func();
+    
+</script>
+</html>

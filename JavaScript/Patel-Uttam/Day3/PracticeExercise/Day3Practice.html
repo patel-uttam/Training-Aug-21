@@ -1,0 +1,162 @@
+<!-- PracticeExercise -->
+<!--
+    - Use the getElementById method to find the <p> element, and change its text to "Hello".
+    - Use the getElementsByTagName method to find the first <p> element, and change its text to "Hello".
+    - Change the text of the elements that has the class name "test".
+    - Use HTML DOM to change the value of the image's src attribute.
+    - Use HTML DOM to change the value of the input field.
+    - Change the text color of the <p> element to "red".
+    - Change the font size of the p element to 40 pixels.
+    - Use the CSS display property to hide the p element.
+    - Use the eventListener to assign an onclick event to the <button> element.
+    - Use Window.location object to navigate on another page.
+    - Use Window.history object to move to previous url in the history list
+    - Try to change windows height and width using Windows object.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Day3 Practice</title>
+</head>
+<body>
+    <h4>Day3 Practice</h4>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="container border">
+        <h5 id="demo1"></h5>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="container border">
+        <p id="demo2"></p>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="container border">
+        <p class="demo3"></p>
+        <p class="demo3"></p>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="container border w-25">
+        <img width="300px" height="300px" id="demo4" src="../../images/valorant.webp" alt=""><br><br>
+        <button class="btn mt-5" onclick="change_photo()">click to change photo</button>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="container border">
+        <input id="demo5" class="form-control" type="text" value="Hello World">
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="container border">
+        <p id="demo6">Hello World</p>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="container border">
+        <p id="demo7">Hello World</p>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="container border">
+        <p id="demo8">Hello World</p>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="container border">
+        <button id="demo9_button" type="button" class="btn btn-primary" onclick="eventlistener()">Click</button>
+        <p id="demo9"></p>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div id="demo10" class="container border">
+        <button class="btn btn-light" onclick="demo10_newsite()">click to opem w3school.com</button>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div id="demo11" class="container border">
+        <button class="btn btn-secondary" onclick="demo11_back()">click to go previous</button>
+        <button class="btn btn-secondary" onclick="demo11_forward()">click to go forward</button>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div id="demo12" class="container border">
+        <button class="btn" onclick="demo12_resize_window()">click to change window's width and height</button>        
+    </div>
+</body>
+<script>
+//
+document.getElementById("demo1").innerHTML = "Hello";
+//
+
+document.getElementsByTagName("P")[0].innerHTML = "'Hello' change by getElementsByTagName";
+//
+document.getElementsByClassName("demo3")[0].innerHTML = "'Hello' first p tag with className 'demo3'";
+document.getElementsByClassName("demo3")[1].innerHTML = "'Hello' second p tag with className 'demo3'";
+//
+function change_photo()
+{
+    document.getElementById("demo4").src = "../../images/cs.jpg";
+}
+
+//
+document.getElementById("demo5").value = "Hello world , Hello world";
+//
+document.getElementById("demo6").style.color="red";
+//
+document.getElementById("demo7").style.fontStyle="40px";
+//
+document.getElementById("demo8").style.visibility="hidden";
+//
+
+    document.getElementById("demo9_button").addEventListener("click",function(){
+        document.getElementById("demo9").innerHTML = "Text added after click";
+
+    })
+
+
+
+//
+function demo10_newsite()
+{
+    location.href="https://www.w3schools.com/";
+}
+//
+function demo11_back()
+{
+    window.history.back();
+}
+function demo11_forward()
+{
+    window.history.forward();
+}
+//
+function demo12_resize_window()
+{   var mywin;
+    mywin = window.open("","","width=100,height=100");
+    mywin.resizeTo(500,500);
+}
+
+</script>
+</html>

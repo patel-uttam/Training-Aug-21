@@ -1,0 +1,99 @@
+<!-- Practice -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5 Practice</title>
+</head>
+<body>
+    <h3>practice Day5</h3>
+</body>
+<script>
+    // Practice 1
+    var prac1 = function(r){return (3.14*(r*r))};
+    console.log(prac1(4));
+
+    // practice 2
+
+    var prac2 = new Function("a","b","return (a*b)");
+    console.log(prac2(4,5))
+
+    // pRactice 3
+    
+    // hosting in javascript simply meanto call function/variable before declaring it.
+
+    console.log(fun_host("Function hosting"));
+
+    function fun_host(str)
+    {
+        return str;
+    }
+
+    // Practice 4
+    //Using Function call create employee object with field Name, Address and Designation and pass it to function.
+    // var prac11_obj = 
+    // {
+    //     prac11_Name : "Uttam Patel",
+    //     prac11_Address : "4, swagat villa",
+    //     prac11_designation : "junior",
+    //     prac11_function : function(){return("Name : " + this.prac11_Name+","+" "+"Address : "+this.prac11_Address+","+" "+"designation : "+this.prac11_designation)}
+    // }
+    // console.log(prac11_obj.prac11_function());
+
+    // OR 
+    var prac4_obj_1 = 
+    {
+        prac4_Name : "Uttam Patel",
+        prac4_Address : "4, swagat villa",
+        prac4_designation : "junior",
+    }
+    var prac4_obj_2 = 
+    {
+        prac4_function : function(){return("Name : " + this.prac4_Name+","+" "+"Address : "+this.prac4_Address+","+" "+"designation : "+this.prac4_designation)}
+    }
+    console.log(prac4_obj_2.prac4_function.call(prac4_obj_1));
+
+
+
+    // Practice 5
+    //Using Function Apply pass employee object to a function defined in the function.
+
+    var prac5_obj_1 = 
+    {
+        prac5_Name : "Uttam Patel",
+        prac5_Address : "4, swagat villa",
+        prac5_designation : "junior",
+    }
+    var prac5_obj_2 = 
+    {
+        prac5_function : function(designation){return("Name : " + this.prac5_Name+","+" "+"Address : "+this.prac5_Address+","+" "+"designation : "+designation)}
+    }
+    console.log(prac5_obj_2.prac5_function.apply(prac5_obj_1,["senior"]));
+
+    // Practice 6
+    //Explain Function closure with practical
+    // closure : 
+    
+    var func_selfinvoke = (function(){
+        var num1 = 0;
+        return function()
+        {
+            num1 += 1;
+            return num1; 
+        }    
+    })();
+    console.log(func_selfinvoke());
+    console.log(func_selfinvoke());
+    console.log(func_selfinvoke());
+    // console.log(func_selfinvoke());
+    // console.log(func_selfinvoke());
+    // console.log(func_selfinvoke());
+    // console.log(func_selfinvoke());
+    // console.log(func_selfinvoke());
+    // console.log(func_selfinvoke());
+    // console.log(func_selfinvoke());
+</script>
+</html>
