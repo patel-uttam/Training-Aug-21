@@ -1,0 +1,14 @@
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\bin\Debug\netcoreapp3.1\Day7-8Practical.exe
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\bin\Debug\netcoreapp3.1\Day7-8Practical.deps.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\bin\Debug\netcoreapp3.1\Day7-8Practical.runtimeconfig.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\bin\Debug\netcoreapp3.1\Day7-8Practical.runtimeconfig.dev.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\bin\Debug\netcoreapp3.1\Day7-8Practical.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\bin\Debug\netcoreapp3.1\Day7-8Practical.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\obj\Debug\netcoreapp3.1\Day7-8Practical.csproj.AssemblyReference.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\obj\Debug\netcoreapp3.1\Day7-8Practical.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\obj\Debug\netcoreapp3.1\Day7-8Practical.AssemblyInfoInputs.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\obj\Debug\netcoreapp3.1\Day7-8Practical.AssemblyInfo.cs
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\obj\Debug\netcoreapp3.1\Day7-8Practical.csproj.CoreCompileInputs.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\obj\Debug\netcoreapp3.1\Day7-8Practical.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\obj\Debug\netcoreapp3.1\Day7-8Practical.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Practical\Day7-8Practical\obj\Debug\netcoreapp3.1\Day7-8Practical.genruntimeconfig.cache

@@ -1,0 +1,14 @@
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\bin\Debug\netcoreapp3.1\Day5Practice.exe
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\bin\Debug\netcoreapp3.1\Day5Practice.deps.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\bin\Debug\netcoreapp3.1\Day5Practice.runtimeconfig.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\bin\Debug\netcoreapp3.1\Day5Practice.runtimeconfig.dev.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\bin\Debug\netcoreapp3.1\Day5Practice.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\bin\Debug\netcoreapp3.1\Day5Practice.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\obj\Debug\netcoreapp3.1\Day5Practice.csproj.AssemblyReference.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\obj\Debug\netcoreapp3.1\Day5Practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\obj\Debug\netcoreapp3.1\Day5Practice.AssemblyInfoInputs.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\obj\Debug\netcoreapp3.1\Day5Practice.AssemblyInfo.cs
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\obj\Debug\netcoreapp3.1\Day5Practice.csproj.CoreCompileInputs.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\obj\Debug\netcoreapp3.1\Day5Practice.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\obj\Debug\netcoreapp3.1\Day5Practice.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day5\Day5Practice\Day5Practice\obj\Debug\netcoreapp3.1\Day5Practice.genruntimeconfig.cache
