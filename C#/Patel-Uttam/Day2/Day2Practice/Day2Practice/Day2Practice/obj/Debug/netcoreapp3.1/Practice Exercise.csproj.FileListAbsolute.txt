@@ -1,0 +1,14 @@
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\bin\Debug\netcoreapp3.1\Practice Exercise.exe
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\bin\Debug\netcoreapp3.1\Practice Exercise.deps.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\bin\Debug\netcoreapp3.1\Practice Exercise.runtimeconfig.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\bin\Debug\netcoreapp3.1\Practice Exercise.runtimeconfig.dev.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\bin\Debug\netcoreapp3.1\Practice Exercise.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\bin\Debug\netcoreapp3.1\Practice Exercise.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\obj\Debug\netcoreapp3.1\Practice Exercise.csproj.AssemblyReference.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\obj\Debug\netcoreapp3.1\Practice Exercise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\obj\Debug\netcoreapp3.1\Practice Exercise.AssemblyInfoInputs.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\obj\Debug\netcoreapp3.1\Practice Exercise.AssemblyInfo.cs
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\obj\Debug\netcoreapp3.1\Practice Exercise.csproj.CoreCompileInputs.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\obj\Debug\netcoreapp3.1\Practice Exercise.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\obj\Debug\netcoreapp3.1\Practice Exercise.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day2\Practice Exercise\Practice Exercise\Practice Exercise\obj\Debug\netcoreapp3.1\Practice Exercise.genruntimeconfig.cache
