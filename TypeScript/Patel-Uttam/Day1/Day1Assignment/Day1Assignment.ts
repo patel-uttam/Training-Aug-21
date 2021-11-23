@@ -23,19 +23,19 @@ employee_array.push(employee5);
 
 
 // search my index
-var while_flag_index:number =1; 
-while(while_flag_index < 4)
+var while_flag_index:boolean =true; 
+while(while_flag_index)
 {
     var index:number = 1;
     var search_employee_index:Array<number|string> = employee_array[index];
     console.log(search_employee_index)
     
-    while_flag_index = 4;
+    while_flag_index = false;
 }
 console.log('\n');
 // search by id
-var while_flag_id:number =1; 
-while(while_flag_id <4)
+var while_flag_id:boolean =true; 
+while(while_flag_id)
 {
     var id:number = 3;
     
@@ -45,11 +45,11 @@ while(while_flag_id <4)
         {
             var search_employee_id:Array<number|string> = employee_array[i]; 
             console.log(search_employee_id)
-            while_flag_id = 4;
+            while_flag_id = false;
             break;
         }
     }
-    while_flag_id =4;
+    while_flag_id =false;
 }
 console.log('\n\n');
 
