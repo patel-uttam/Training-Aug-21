@@ -33,8 +33,10 @@ var str3upper: string = str3.toUpperCase();
 var str2locateupper: string = str2.toLocaleLowerCase();
 var str1trim: string = str1.trim();
 var str2charcodeat: number = str2.charCodeAt(3);
-var str3nds: boolean = str3.endsWith('z');
-var strstart: boolean = str3.startsWith('b');
+var str3nds: boolean = str3.endsWith('z',3);
+var strstart: boolean = str3.startsWith('b',2);
+var str2substring:string = str2.substring(1,3);
+var str1substr:string = str1.substr(1,str1.length-1);
 
 //boolean
 var bool1: boolean = true;
@@ -51,7 +53,7 @@ console.log(`Num1 Value ${num1} ; num2 Value ${num2} ; num3 Value ${num3}`);
 var arr1: Array<number> = [1, 2, 4, 5, 6, 7];
 var arr2: string[] = ['Hi', 'Hello', 'Fine'];
 var arr3: Array<number | string> = ['hi', 1, 'hello', 2, 3, 'ok'];
-var arr4: number[] = [];
+var arr4: String[] = ['','','','',''];
 // array loop access
 
 for (var i in arr2) {
@@ -67,6 +69,9 @@ var arr2filter = arr2.filter((arr2, i, arr) => {
   return arr2.length > 2;
 });
 
-var arr4fill = arr4.fill(1, 4);
+var arr4fill:String[] = arr4.fill('static_value',2  ,4);
 
+console.log(arr4fill);
 var arr3shift = arr3.shift();
+
+var arr2length:number = arr2.length;

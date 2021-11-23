@@ -19,9 +19,9 @@ while (while_flag_index < 4) {
     var index = 1;
     var search_employee_index = employee_array[index];
     console.log(search_employee_index);
-    index++;
-    while_flag_index++;
+    while_flag_index = 4;
 }
+console.log('\n');
 // search by id
 var while_flag_id = 1;
 while (while_flag_id < 4) {
@@ -31,20 +31,19 @@ while (while_flag_id < 4) {
             var search_employee_id = employee_array[i];
             console.log(search_employee_id);
             while_flag_id = 4;
-        }
-        else {
-            console.log("Not Employee with id " + id + "\n");
+            break;
         }
     }
-    while_flag_id++;
+    while_flag_id = 4;
 }
+console.log('\n\n');
 //delete employee
-console.log("deleted employee" + employee_array.pop() + '\n');
+console.log("deleted employee : -" + employee_array.pop() + '\n');
 // concatenate employee_array_second to employee_array
 var employee_array_second = [];
 employee_array_second.push(employee5);
 employee_array = employee_array.concat(employee_array_second);
-console.log("join array to employee_array" + employee_array + '\n\n');
+console.log("join array to employee_array : -" + employee_array[employee_array.length - 2] + '\n\n');
 for (var i in employee_array) {
     console.log("EmployeeID : " + employee_array[i][0] + "\n");
     console.log("Employee FullName : " + employee_array[i][1] + " " + employee_array[i][2] + '\n');

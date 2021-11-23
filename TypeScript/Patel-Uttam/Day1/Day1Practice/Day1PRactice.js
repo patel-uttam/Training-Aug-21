@@ -27,8 +27,10 @@ var str3upper = str3.toUpperCase();
 var str2locateupper = str2.toLocaleLowerCase();
 var str1trim = str1.trim();
 var str2charcodeat = str2.charCodeAt(3);
-var str3nds = str3.endsWith('z');
-var strstart = str3.startsWith('b');
+var str3nds = str3.endsWith('z', 3);
+var strstart = str3.startsWith('b', 2);
+var str2substring = str2.substring(1, 3);
+var str1substr = str1.substr(1, str1.length - 1);
 //boolean
 var bool1 = true;
 //
@@ -40,7 +42,7 @@ console.log("Num1 Value ".concat(num1, " ; num2 Value ").concat(num2, " ; num3 V
 var arr1 = [1, 2, 4, 5, 6, 7];
 var arr2 = ['Hi', 'Hello', 'Fine'];
 var arr3 = ['hi', 1, 'hello', 2, 3, 'ok'];
-var arr4 = [];
+var arr4 = ['', '', '', '', ''];
 // array loop access
 for (var i in arr2) {
     console.log("".concat(i));
@@ -53,5 +55,7 @@ for (var _i = 0, arr2_1 = arr2; _i < arr2_1.length; _i++) {
 var arr2filter = arr2.filter(function (arr2, i, arr) {
     return arr2.length > 2;
 });
-var arr4fill = arr4.fill(1, 4);
+var arr4fill = arr4.fill('static_value', 2, 4);
+console.log(arr4fill);
 var arr3shift = arr3.shift();
+var arr2length = arr2.length;
