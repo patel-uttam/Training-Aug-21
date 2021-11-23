@@ -19,6 +19,7 @@ while (while_flag_index < 4) {
     var index = 1;
     var search_employee_index = employee_array[index];
     console.log(search_employee_index);
+    index++;
     while_flag_index++;
 }
 // search by id
@@ -29,6 +30,7 @@ while (while_flag_id < 4) {
         if (employee_array[i][0] == id) {
             var search_employee_id = employee_array[i];
             console.log(search_employee_id);
+            while_flag_id = 4;
         }
         else {
             console.log("Not Employee with id " + id + "\n");

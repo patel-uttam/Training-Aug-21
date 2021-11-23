@@ -30,8 +30,7 @@ while(while_flag_index < 4)
     var search_employee_index:Array<number|string> = employee_array[index];
     console.log(search_employee_index)
      
-    index++;
-    while_flag_index ++;
+    while_flag_index = 4;
 }
 
 // search by id
@@ -47,13 +46,15 @@ while(while_flag_id <4)
             var search_employee_id:Array<number|string> = employee_array[i]; 
             console.log(search_employee_id)
             while_flag_id = 4;
+            break;
+
         }
         else
         {
             console.log("Not Employee with id "+id + "\n");
         }
     }
-    while_flag_id ++;
+    while_flag_id =4;
 }
 
 //delete employee
