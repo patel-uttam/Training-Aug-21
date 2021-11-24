@@ -7,14 +7,6 @@ console.log("\n");
 
 let employee_array:Array<number|string>[] = [] ;
 
-// inserting new 
-// var employee1:Array<number|string> = [1,'Pramath','Patel','b-23,Radhe Villa,gandhinagar,gujarat',20000]
-// var employee2:Array<number|string> = [2,'Sahil','Patel','b-23,Radhe Villa,gandhinagar,gujarat',21000];  
-// var employee3:Array<number|string> = [3,'Bhushan','Vagh','b-23,Radhe Villa,gandhinagar,gujarat',22000];  
-// var employee4:Array<number|string> = [4,'Kunj','Patel','b-23,Radhe Villa,gandhinagar,gujarat',19000];  
-// var employee5:Array<number|string> = [5,'Dhruv','Patel','b-23,Radhe Villa,gandhinagar,gujarat',15000];  
-
-
 function employee_insert(Id:number, FirstName:string, SecondName:string, Address:string, Salary:number):void
 {
     let employee:Array<number|string>=[];
@@ -41,16 +33,18 @@ for(var value of employee_array)
     console.log(value);
 }
 
-var readline = require('readline');
-let input_value_index = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
+// to read input
 
-  let input_value_id = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
+// var readline = require('readline');
+// let input_value_index = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+//   });
+
+//   let input_value_id = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+//   });
 
 // search my index
 
@@ -113,18 +107,17 @@ employee_Array_concate(6,'Dhruvit','Dhar','b-23,Radhe Villa,gandhinagar,gujarat'
 // display details
 function employee_display():void
 {
-    for(var value of employee_array)
+    for(var i in employee_array)
     {
-        console.log(value);
-        // console.log("EmployeeID : " + employee_array[1][0] + "\n");
-        // console.log("Employee FullName : " + employee_array[i][1]+" "+employee_array[i][2] + '\n');
-        // var employee_address_row:string = employee_array[i][3].toString();
-        // var employee_address:string[] = employee_address_row.split(',');
-        // console.log("Employee Address : { " + "HouseNumber : "+employee_address[0] +","+ "society : "+employee_address[1] +","+ "city : "+employee_address[2] +","+ "State : "+employee_address[3]+" }"+ '\n');
-        // var employee_PF_string:string = employee_array[i][4].toString();
-        // var employee_PF:number= parseInt(employee_PF_string);
-        // console.log("Employee's PF : "+ employee_PF*0.12);
-        // console.log("---------------------------------");
+        console.log("EmployeeID : " + employee_array[i][0] + "\n");
+        console.log("Employee FullName : " + employee_array[i][1]+" "+employee_array[i][2] + '\n');
+        var employee_address_row:string = employee_array[i][3].toString();
+        var employee_address:string[] = employee_address_row.split(',');
+        console.log("Employee Address : { " + "HouseNumber : "+employee_address[0] +","+ "society : "+employee_address[1] +","+ "city : "+employee_address[2] +","+ "State : "+employee_address[3]+" }"+ '\n');
+        var employee_PF_string:string = employee_array[i][4].toString();
+        var employee_PF:number= parseInt(employee_PF_string);
+        console.log("Employee's PF : "+ employee_PF*0.12);
+        console.log("---------------------------------");
     }
 
 }
