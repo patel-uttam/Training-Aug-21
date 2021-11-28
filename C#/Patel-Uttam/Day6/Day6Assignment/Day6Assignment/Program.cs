@@ -9,34 +9,26 @@ namespace Day6Assignment
 
         public void Area(double height, double width)
         {
-            Console.WriteLine("Area is: {0}", (width * height));
+            Console.WriteLine($"Area is: {(width * height)}");
         }
-
-        public static double RectArea(double height, double width)
-        {
-            return height * width;
-        }
-
 
 
 
         static void Main(string[] args)
         {
-            //Compute area of rectangle using func delegate
-            Program rect = new Program();
+            // area of rectangle using func delegate
+            Program p = new Program();
 
-            RectDelegate rectDele = new RectDelegate(rect.Area);
+            Rectangle rect = new Rectangle(p.Area);
 
-            rectDele.Invoke(6.3, 5.2);
+            rect.Invoke(10, 5);
 
-            //Compute add of two number using lambda expression
+            //sum of two number using lambda expression
 
-            Func<double, double, double> area = (double height, double widtht) => (height * widtht);
-            Console.WriteLine(area(6.3, 5.2));
 
-            Func<int, int, int> sum = (int num1, int num2) => (num1 + num2);
+            Func<int,int,int> sum = (int num1, int num2) => (num1 + num2);
 
-            Console.WriteLine(sum(2, 3));
+            Console.WriteLine($"Sum of two number {sum(7082, 7069)}");
         }
     }
 }
