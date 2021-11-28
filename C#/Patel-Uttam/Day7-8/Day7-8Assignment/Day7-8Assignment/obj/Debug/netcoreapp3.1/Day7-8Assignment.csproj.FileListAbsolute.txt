@@ -3,3 +3,12 @@ C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Utta
 C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\obj\Debug\netcoreapp3.1\Day7-8Assignment.AssemblyInfoInputs.cache
 C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\obj\Debug\netcoreapp3.1\Day7-8Assignment.AssemblyInfo.cs
 C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\obj\Debug\netcoreapp3.1\Day7-8Assignment.csproj.CoreCompileInputs.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\bin\Debug\netcoreapp3.1\Day7-8Assignment.exe
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\bin\Debug\netcoreapp3.1\Day7-8Assignment.deps.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\bin\Debug\netcoreapp3.1\Day7-8Assignment.runtimeconfig.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\bin\Debug\netcoreapp3.1\Day7-8Assignment.runtimeconfig.dev.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\bin\Debug\netcoreapp3.1\Day7-8Assignment.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\bin\Debug\netcoreapp3.1\Day7-8Assignment.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\obj\Debug\netcoreapp3.1\Day7-8Assignment.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\obj\Debug\netcoreapp3.1\Day7-8Assignment.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day7-8\Day7-8Assignment\Day7-8Assignment\obj\Debug\netcoreapp3.1\Day7-8Assignment.genruntimeconfig.cache

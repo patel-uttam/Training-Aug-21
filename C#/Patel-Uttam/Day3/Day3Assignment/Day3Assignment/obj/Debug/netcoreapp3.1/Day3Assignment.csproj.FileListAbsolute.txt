@@ -1,0 +1,14 @@
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\bin\Debug\netcoreapp3.1\Day3Assignment.exe
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\bin\Debug\netcoreapp3.1\Day3Assignment.deps.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\bin\Debug\netcoreapp3.1\Day3Assignment.runtimeconfig.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\bin\Debug\netcoreapp3.1\Day3Assignment.runtimeconfig.dev.json
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\bin\Debug\netcoreapp3.1\Day3Assignment.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\bin\Debug\netcoreapp3.1\Day3Assignment.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\obj\Debug\netcoreapp3.1\Day3Assignment.csproj.AssemblyReference.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\obj\Debug\netcoreapp3.1\Day3Assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\obj\Debug\netcoreapp3.1\Day3Assignment.AssemblyInfoInputs.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\obj\Debug\netcoreapp3.1\Day3Assignment.AssemblyInfo.cs
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\obj\Debug\netcoreapp3.1\Day3Assignment.csproj.CoreCompileInputs.cache
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\obj\Debug\netcoreapp3.1\Day3Assignment.dll
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\obj\Debug\netcoreapp3.1\Day3Assignment.pdb
+C:\Users\vicky\Desktop\Repository\Traning-Aug-2021\Training-Aug-21\C#\Patel-Uttam\Day3\Day3Assignment\Day3Assignment\obj\Debug\netcoreapp3.1\Day3Assignment.genruntimeconfig.cache

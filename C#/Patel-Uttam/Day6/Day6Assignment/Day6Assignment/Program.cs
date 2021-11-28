@@ -4,10 +4,9 @@ namespace Day6Assignment
 {
     class Program
     {
-        public delegate void RectDelegate(double height,
-                                 double width);
+        public delegate void Rectangle(double height,double width);
 
-        // "area" method
+
         public void Area(double height, double width)
         {
             Console.WriteLine("Area is: {0}", (width * height));
