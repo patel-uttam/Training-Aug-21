@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day14Assignment.API", "Day14Assignment.API\Day14Assignment.API.csproj", "{9A15C61F-E4BE-402B-A24D-B64983385F65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A15C61F-E4BE-402B-A24D-B64983385F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A15C61F-E4BE-402B-A24D-B64983385F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A15C61F-E4BE-402B-A24D-B64983385F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A15C61F-E4BE-402B-A24D-B64983385F65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E612CCC6-CE95-4819-B548-21720D6B1A27}
+	EndGlobalSection
+EndGlobal
