@@ -4,49 +4,49 @@ using System.Text;
 
 namespace Day6Practice
 {
-    delegate void delegate_<T>(T number);
+    delegate void Delegate<T>(T number);
     class Project
     {
 
-        public event delegate_<int> Event_;
+        public event Delegate<int> Event;
         public static void Main()
         {
-            var delegate_ = new delegate_<int>(delegate (int r)
+            var Delegate = new Delegate<int>(delegate (int r)
             {
                 Console.WriteLine(r * r);
             });
-            delegate_(45);
+            Delegate(45);
             Project d = new Project();
-            d.Event_ += new delegate_<int>(p =>
+            d.Event += new Delegate<int>(p =>
             {
                 Console.WriteLine(p * p);
             });
-            d.Event_(12);
-            var display1 = new delegate_<double>(delegate (double r)
+            d.Event(12);
+            var display1 = new Delegate<long>(delegate (long r)
             {
-                Console.WriteLine(r * r);
+                Console.WriteLine(r-(r/2));
             });
 
-            var dis = new delegate_<string>((r) =>
+            var dis = new Delegate<string>((r) =>
             {
-                Console.WriteLine("WElcome " + r);
+                Console.WriteLine(r + "Passed parameter");
             });
 
-            dis("Varsha");
+            dis("'Passed value'");
 
-            display1(45.4646);
+            display1(454646);
 
-            Func<int> func = new Func<int>(() =>
+            Func<int,int> func = new Func<int,int>((n) =>
             {
-                return 10 * 10;
+                return n+n;
             });
-            Console.WriteLine(func());
-            Func<string, int> func1 = new Func<string, int>((s) =>
+            Console.WriteLine(func(10));
+            Func<string> func1 = new Func<string>(() =>
             {
-                return s.Length;
+                return "Return string";
             });
-            Console.WriteLine(func1("Meghna"));
-
+            
+            Console.WriteLine(func1());
         }
  
     }

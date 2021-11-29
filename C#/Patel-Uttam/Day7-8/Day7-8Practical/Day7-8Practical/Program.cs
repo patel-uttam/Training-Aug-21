@@ -8,52 +8,68 @@ namespace Day7_8Practical
     {
         static void Main(string[] args)
         {
-/*            int[] array_value = { 2, 3, 5, 7, 11, 13, 17, 19 };*/
-            var primes = new List<int> { 2 , 3 , 5 , 7 , 11 , 13 , 17 , 19 };
-            /*primes.AddRange(array_value);*/
-            var query = from val in primes
-                        where val < 13
-                        select val;
-            foreach (var val in query)
-            {
-                Console.WriteLine(val);
-            }
-            var query2 = primes.Where(x => x < 17);
-            foreach (var val in query2)
-            {
-                Console.WriteLine(val);
-            }
+            var List1 = new List<int>();
+
+            int[] a1;
+            a1 = new int[5] {2,4,8,16,32};
+
+
+
+            // Projection operator
+            //select and SelectMany
+
+
+            var select_query = from l1 in List1 select new {l1};
+
+            var select_method = List1.Select(l1 => List1.ToList());  //toList method to convert output in List format
+
+             var lists = new List<List<int>>();
+            lists.Add(List1);
+
+            var selectMany_query = from L1 in lists from list in lists[0] select list;
+
+            var selectMany_method = lists.SelectMany(l1=>l1.ToList());
+
+            
+            
+            /*filtering*/
+            // where  and oftype
+
+            List1.AddRange(a1);
+            var where_query = from l1 in List1 where l1 % 2 == 0select l1;
+            
+            var where_operator = List1.Where(x => x < 17);
+
+            var oftype_query = from l1 in List1 where l1 is int select l1;
+
+            var oftype_method = List1.OfType<int>();
+
+
 
             //order by and group by
 
-            var query3 = from method in typeof(double).GetMethods()
-                         orderby method.Name
-                         group method by method.Name into groups
-                         select new { MethodName = groups.Key, MethodOfOverloads = groups.Count() };
-            foreach (var val in query3)
-            {
-                Console.WriteLine(val);
-            }
+            var orderby_query = from l1 in List1 orderby l1 select l1;
 
-            //linq operators and cotains
-            var listOne = Enumerable.Empty<int>();
-            var listTwo = Enumerable.Range(1, 20);
+            var orderby_method = List1.OrderBy(l1 => l1.ToString());
 
-            bool listOneEmpty = listOne.Any();
-            bool listTwoEmpty = listTwo.Any();
+            var orderbydesending_method = List1.OrderByDescending(l1 => l1.ToString());
 
-            Console.WriteLine("list one has members?" + listOneEmpty + "\nList two has members?" + listTwoEmpty);
+            var groupby_query = from l1 in List1 group l1 by l1.ToString();
 
-            //contains
-            Console.WriteLine("List two has 12 ?" + listTwo.Contains(12));
+            var groupby_method = List1.GroupBy(l1=>l1.ToString());
 
-            //take
-            var listThree = listTwo.Take(5).Select(x => x * 10);
 
-            foreach (var val in listThree)
-            {
-                Console.WriteLine(val);
-            }
+            //all
+
+            var all_method = List1.All(l1 => l1 < 128);
+
+            // max and min
+
+            var max_method = List1.Max();
+
+            var min_method = List1.Min();
+            //contains 
+            var is_contain = List1.Contains(6);
 
             Console.ReadKey();
         }
