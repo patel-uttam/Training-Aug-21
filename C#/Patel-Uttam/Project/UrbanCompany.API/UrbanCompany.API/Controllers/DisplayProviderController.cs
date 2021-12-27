@@ -29,6 +29,7 @@ namespace UrbanCompany.API.Controllers
         }*/
 
         // GET api/<DisplayProviderController>/5
+
         [HttpGet("{name}")]
         public IEnumerable<Provider> Get(string name)
         {

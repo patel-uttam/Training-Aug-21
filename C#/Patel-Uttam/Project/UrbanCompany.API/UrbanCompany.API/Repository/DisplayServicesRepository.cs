@@ -30,9 +30,10 @@ namespace UrbanCompany.API.Repository
 
         public IEnumerable<SubService> Get_Sub_Service(string name)
         {
-            int service_category_id = context.ServicesCategories.FirstOrDefault(s=>s.ServiceName == name).ServiceId;
-            var sub_services = context.SubServices.Where(s => s.ServiceId == service_category_id);
-            return sub_services;
+            return context.SubServices.Where(s=>s.ServiceId == context.ServicesCategories.FirstOrDefault(s=>s.ServiceName == name).ServiceId);
+            /*Console.WriteLine(subServices.FirstOrDefault(s=>s.ServiceId >0));*/
+            
+            
         }
     }
 }

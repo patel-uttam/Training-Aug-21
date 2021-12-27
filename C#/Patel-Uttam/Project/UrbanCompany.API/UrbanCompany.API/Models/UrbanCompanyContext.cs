@@ -93,11 +93,6 @@ namespace UrbanCompany.API.Models
 
             modelBuilder.Entity<Order>(entity =>
             {
-                entity.Property(e => e.CartReference)
-                    .IsRequired()
-                    .IsUnicode(false)
-                    .HasColumnName("Cart_Reference");
-
                 entity.Property(e => e.TotalCost).HasColumnName("Total_Cost");
 
                 entity.HasOne(d => d.CustomerNavigation)

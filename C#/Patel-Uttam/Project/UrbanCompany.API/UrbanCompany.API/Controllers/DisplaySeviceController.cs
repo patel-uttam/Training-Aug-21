@@ -12,7 +12,7 @@ using UrbanCompany.API.Repository;
 
 namespace UrbanCompany.API.Controllers
 {
-    [Route("api/services/category")]
+    [Route("api/services")]
     [ApiController]
     public class DisplaySeviceController : ControllerBase
     {

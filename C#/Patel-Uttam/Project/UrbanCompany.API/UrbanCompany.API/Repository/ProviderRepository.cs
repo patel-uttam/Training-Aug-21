@@ -55,9 +55,12 @@ namespace UrbanCompany.API.Repository
         /*filter*/
         public IEnumerable<Provider> GetProviderByService(string service)
         {
-            int service_id = context.ServicesCategories.FirstOrDefault(s => s.ServiceName == service).ServiceId;
-            var providers = context.Providers.Where(p=>p.Service==service_id);
-            return providers;
+/*            int serviceId = context.ServicesCategories.FirstOrDefault(s => s.ServiceName == service).ServiceId;
+            Console.WriteLine(serviceId);
+            Console.WriteLine(service);
+*/            return context.Providers.Where(p => p.Service == context.ServicesCategories.FirstOrDefault(s=>s.ServiceName == service).ServiceId);
+            
+            
         }
     }
 }

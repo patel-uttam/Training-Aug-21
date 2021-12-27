@@ -14,7 +14,6 @@ namespace UrbanCompany.API.Models
 
         public int OrderId { get; set; }
         public int? Customer { get; set; }
-        public string CartReference { get; set; }
         public int TotalCost { get; set; }
 
         public virtual Customer CustomerNavigation { get; set; }

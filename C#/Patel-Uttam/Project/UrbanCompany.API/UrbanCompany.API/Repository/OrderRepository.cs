@@ -26,8 +26,8 @@ namespace UrbanCompany.API.Repository
             
             /*            int customer_id = context.Customers.FirstOrDefault(c => c.CustomerName == name).CustomerId;*/
             int? CustomerId = 0;
-            List<int> CartsId=new List<int>();
-            int TotalValue=0;
+/*            List<int> CartsId=new List<int>();
+*/            int TotalValue=0;
 
 
             if (cart.All(c => c.Customer == id))
@@ -36,13 +36,12 @@ namespace UrbanCompany.API.Repository
                 {
                     if (c.Customer == id)
                     {
-                        CartsId.Add(c.CartId);
                         TotalValue = TotalValue+c.Cost;
                     }
                 }
                 CustomerId = cart.First(c=>c.Customer==id).Customer;
                 order.Customer = CustomerId;
-                order.CartReference = string.Join(',',CartsId);
+/*                order.CartReference = string.Join(',',CartsId);*/
                 order.TotalCost = TotalValue;
 
                 context.Orders.Add(order);
