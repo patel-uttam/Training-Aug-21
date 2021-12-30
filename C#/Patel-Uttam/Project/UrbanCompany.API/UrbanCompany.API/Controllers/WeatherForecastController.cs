@@ -9,7 +9,7 @@ using UrbanCompany.API.Authentication;
 
 namespace UrbanCompany.API.Controllers
 {
-    [Authorize(Roles = Roles.Provider)]
+
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
