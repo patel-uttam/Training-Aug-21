@@ -8,9 +8,9 @@ namespace UrbanCompany.API.Repository
 {
     public interface ICartRepository
     {
-        IEnumerable<Cart> GetCart(int id);
+        IEnumerable<CartDisplay> GetCart(int id);
 
-        Cart AddToCart(int id, Cart cart);
+        Boolean AddToCart(int id, Cart cart);
 
         void DeleteCart(int Cust_id , int Cart_id);
 

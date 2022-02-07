@@ -8,12 +8,9 @@ namespace UrbanCompany.API.Repository
 {
     public interface IOrderRepository
     {
-        public Order Make_Order(int id, IEnumerable<Cart> cart);
-
-        public IEnumerable<OrderHistory> GetOrderHistory(int OrderId);
-
-        /*
-                public IEnumerable<Order> GetOrders(int Cust_id);*/
+        public bool Make_Order(int cust_id, IEnumerable<CartDisplay> cart , string date , string time ,int convenience_fee);
+        public bool AddToOrderOngoing(int order_id , IEnumerable<CartDisplay> cart, IList<int> providers, string date, string time);
+        public IEnumerable<OrderDisplay> GetOrderOngoing(int cust_id);
     }
 
 }

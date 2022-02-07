@@ -25,39 +25,38 @@ namespace UrbanCompany.API.Controllers
 
 
 
-        // GET: api/<CustomerController>
-        [Authorize(Roles =Roles.User)]
+        
+        [Authorize(Roles =Roles.Admin)]
         [HttpGet]
+
+        // Get Method to Get Records of Customers (Admin has authority)
+        
+        // return Customer Record in Collections
+
         public IEnumerable<Customer> Get()
         {
             return customer_repository.GetCustomers();
             
         }
 
-        // GET api/<CustomerController>/5
-        [Authorize(Roles = Roles.User)]
-        [HttpGet("{id}")]
-        public Customer Get(int id)
+        // Get Method to Get Data Record By CustomerId (Only Authenticated one get it record)
+
+        // return Customer Record
+
+        [Authorize(Roles = Roles.Customer)]
+        [HttpGet("{user}")]
+        public Customer Get(string user)
         {
-            return customer_repository.GetCustomer(id);
+            return customer_repository.GetCustomer(user);
         }
 
-        /*        // POST api/<CustomerController>
-                [HttpPost]
-                public void Post([FromBody] string value)
-                {
-                }*/
+        // Put to Update Customer Record
 
-        // PUT api/<CustomerController>/5
-        [Authorize(Roles = Roles.User)]
+        [Authorize(Roles = Roles.Customer)]
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Customer customer)
+        public bool Put(int id, [FromBody] Customer customer)
         {
-
-            if(customer.CustomerId == id)
-            {
-                customer_repository.UpdateCustomer(customer);
-            }
+            return customer_repository.UpdateCustomer(id, customer);
         }
 
 /*        // DELETE api/<CustomerController>/5

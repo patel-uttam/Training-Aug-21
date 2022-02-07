@@ -5,15 +5,16 @@ using System.Collections.Generic;
 
 namespace UrbanCompany.API.Models
 {
-    public partial class OrderHistory
+    public partial class OrderOngoing
     {
-        public int OrderHistoryId { get; set; }
+        public int OrderOngoingId { get; set; }
         public int OrderId { get; set; }
         public int? Customer { get; set; }
         public int? Provider { get; set; }
         public int? Service { get; set; }
         public int? SubService { get; set; }
         public string ServiceDate { get; set; }
+        public string ServiceTime { get; set; }
         public int Cost { get; set; }
         public int Qty { get; set; }
 

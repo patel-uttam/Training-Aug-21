@@ -63,7 +63,7 @@ namespace Day12_13Assignment
                             {
                                 Cart cart = new Cart();
                                 cart.CustomerId = purchase_customer_id;
-                                cart.ToyId = purchase_customer_id;
+                                cart.ToyId = toy_id_price.ToyId;
                                 cart.ToyCount = purchase_toy_count;
                                 cart.ToyCartPrice = toy_id_price.ToyPayPrice * purchase_toy_count;
                                 context.Carts.Add(cart);

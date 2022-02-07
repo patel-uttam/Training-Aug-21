@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace UrbanCompany.API.Controllers
 {
-    [Route("api/customer/cart")]
+    [Route("api/customer")]
     [ApiController]
     public class CartController : ControllerBase
     {
@@ -24,33 +24,33 @@ namespace UrbanCompany.API.Controllers
         }
 
 
-        // GET api/<CartController>/5
-        [Authorize(Roles = Roles.User)]
-        [HttpGet("display/{id}")]
-        public IEnumerable<Cart> Get(int id)
+
+        [Authorize(Roles = Roles.Customer)]
+        [HttpGet("{id}/carts")]
+        public IEnumerable<CartDisplay> Get(int id)
         {
             return cartRepository.GetCart(id);
         }
 
         // POST api/<CartController>
-        [Authorize(Roles = Roles.User)]
-        [HttpPost("{id}")]
-        public Cart Post(int id,[FromBody] Cart cart)
+        [Authorize(Roles = Roles.Customer)]
+        [HttpPost("{id}/addtocart")]
+        public Boolean Post(int id,[FromBody] Cart cart)
         {
             return cartRepository.AddToCart(id, cart);
         }
 
 
         // DELETE api/<CartController>/5
-        [Authorize(Roles = Roles.User)]
-        [HttpDelete("delete/{id1}/cartid/{id2}")]
+        [Authorize(Roles = Roles.Customer)]
+        [HttpDelete("{id1}/cartdelete/{id2}")]
         public void Delete(int id1 , int id2)
         {
             cartRepository.DeleteCart(id1, id2);
         }
         // DELETE api/<CartController>/5
-        [Authorize(Roles = Roles.User)]
-        [HttpDelete("delete/{id}")]
+        [Authorize(Roles = Roles.Customer)]
+        [HttpDelete("{id}/cartdelete")]
         public void Delete(int id)
         {
             cartRepository.DeleteCarts(id);

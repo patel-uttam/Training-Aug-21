@@ -15,28 +15,43 @@ namespace UrbanCompany.API.Repository
             context = _context;
         }
 
-        public IEnumerable<Provider> Get_Provider_By_Service(string name)
+
+        // To fetch services from db by category_name
+        public IEnumerable<Service> Get_Service(string category_name)
         {
-            int service_category_id = context.ServicesCategories.FirstOrDefault(s => s.ServiceName == name).ServiceId;
-            var provider_by_service = context.Providers.Where(p => p.Service == service_category_id);
-            return provider_by_service;
+            return context.Services.Where(s => s.CategoryId == context.Categories.FirstOrDefault(c=>c.CategoryName == category_name).CategoryId);   
         }
 
-        public IEnumerable<ServicesCategory> Get_Service_Category()
+        // To fetch service from db by service_id
+
+        public Service Get_Service_By_Id(int id)
         {
-            var service_category = context.ServicesCategories.Where(s => s.ServiceName != null);
-            return service_category;
+            return context.Services.FirstOrDefault(s => s.ServiceId == id);
         }
 
-        public IEnumerable<SubService> Get_Sub_Service(string name)
+        // To fetch subservices from db by service_id
+
+        public IEnumerable<SubService> Get_Sub_Service(int service_id)
         {
-            return context.SubServices.Where(s=>s.ServiceId == context.ServicesCategories.FirstOrDefault(s=>s.ServiceName == name).ServiceId);
-            /*Console.WriteLine(subServices.FirstOrDefault(s=>s.ServiceId >0));*/
-            
-            
+            return context.SubServices.Where(ss=>ss.ServiceId == (context.Services.FirstOrDefault(s => s.ServiceId == service_id).ServiceId));
+        }
+
+        // To fetch subservice from db by subservice_id
+
+        public SubService Get_Sub_Service_By_Id(int id)
+        {
+            return context.SubServices.FirstOrDefault(ss => ss.SubServiceId == id);
+        }
+
+        // To fetch categoryName from db by category_id
+
+        public string Get_Category(int id)
+        {
+            return context.Categories.FirstOrDefault(c=>c.CategoryId == id).CategoryName;   
         }
     }
 }
+
 
 
 

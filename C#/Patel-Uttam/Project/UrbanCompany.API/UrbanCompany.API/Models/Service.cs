@@ -5,27 +5,24 @@ using System.Collections.Generic;
 
 namespace UrbanCompany.API.Models
 {
-    public partial class Customer
+    public partial class Service
     {
-        public Customer()
+        public Service()
         {
             Carts = new HashSet<Cart>();
             OrderHistories = new HashSet<OrderHistory>();
             OrderOngoings = new HashSet<OrderOngoing>();
-            Orders = new HashSet<Order>();
+            SubServices = new HashSet<SubService>();
         }
 
-        public int CustomerId { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerPhone { get; set; }
-        public string CustomerEmail { get; set; }
-        public string CustomerAddress1 { get; set; }
-        public string CustomerCity { get; set; }
-        public string CustomerDistrict { get; set; }
+        public int ServiceId { get; set; }
+        public string ServiceName { get; set; }
+        public int? CategoryId { get; set; }
 
+        public virtual Category Category { get; set; }
         public virtual ICollection<Cart> Carts { get; set; }
         public virtual ICollection<OrderHistory> OrderHistories { get; set; }
         public virtual ICollection<OrderOngoing> OrderOngoings { get; set; }
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<SubService> SubServices { get; set; }
     }
 }

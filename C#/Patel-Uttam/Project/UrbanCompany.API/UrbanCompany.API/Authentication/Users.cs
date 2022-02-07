@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Identity;
 
 namespace UrbanCompany.API.Authentication
 {
-    public class Users : IdentityUser
+    public class Users : IdentityUser 
     {
+
     }
 }

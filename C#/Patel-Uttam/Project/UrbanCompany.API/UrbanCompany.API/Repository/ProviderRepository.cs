@@ -24,17 +24,9 @@ namespace UrbanCompany.API.Repository
             return provider;
         }
 
-        /*        public Provider DeleteProvider(string name)
-                {
-                    var deleted_provider = context.Providers.FirstOrDefault(p=>p.ProviderName == name);
-                    context.Providers.Remove(deleted_provider);
-                    context.SaveChanges();
-                    return deleted_provider;
-                }*/
-
-        public Provider GetProvider(int id)
+        public Provider GetProvider(string name)
         {
-            var selected_provider = context.Providers.FirstOrDefault(p=>p.ProviderId == id);
+            var selected_provider = context.Providers.FirstOrDefault(p=>p.UserName == name);
             return selected_provider;
         }
 
@@ -45,22 +37,36 @@ namespace UrbanCompany.API.Repository
 
         public Provider UpdateProvider(Provider provider)
         {
-            var updated_provider = context.Attach(provider);
-            updated_provider.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            Provider p = context.Providers.FirstOrDefault(p=>p.ProviderId == provider.ProviderId);
+            
+            p.FirstName = provider.FirstName;
+            p.LastName = provider.LastName;
+            p.ProviderCity = provider.ProviderCity;             
+            p.ProviderDistrict = provider.ProviderDistrict;
+
+            context.Providers.Update(p);
             context.SaveChanges();
-            return provider;
+            return p;
         }
 
 
         /*filter*/
-        public IEnumerable<Provider> GetProviderByService(string service)
+        public IEnumerable<Provider> GetProviderByCategory_City(int category , string city)
+        {                    
+            return context.Providers.Where(p => p.Category == category && p.ProviderCity == city);
+        }
+
+        public IEnumerable<string> GetCategory(string dist)
         {
-/*            int serviceId = context.ServicesCategories.FirstOrDefault(s => s.ServiceName == service).ServiceId;
-            Console.WriteLine(serviceId);
-            Console.WriteLine(service);
-*/            return context.Providers.Where(p => p.Service == context.ServicesCategories.FirstOrDefault(s=>s.ServiceName == service).ServiceId);
-            
-            
+            var categories_id= context.Providers.Where(p => p.ProviderDistrict == dist).Select(p=>p.Category).Distinct().ToList();
+
+            List<string> category = new List<string>();
+
+            foreach(var id in categories_id)
+            {
+                category.Add(context.Categories.FirstOrDefault(c => c.CategoryId == id).CategoryName.ToString());
+            }
+            return category;
         }
     }
 }

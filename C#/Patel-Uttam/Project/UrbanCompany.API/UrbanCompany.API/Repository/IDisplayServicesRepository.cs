@@ -10,14 +10,26 @@ namespace UrbanCompany.API.Repository
     public interface IDisplayServicesRepository
     {
 
-        IEnumerable<ServicesCategory> Get_Service_Category();
+        // services
+
+            // get services by category_id
+            IEnumerable<Service> Get_Service(string name);
+
+            // get service by service+name
+            Service Get_Service_By_Id(int id);
+
 
         // sub services
 
-        IEnumerable<SubService> Get_Sub_Service(string name);
+            // get seuservice by service_id
+            IEnumerable<SubService> Get_Sub_Service(int id);
+            
+            // get service by service_name
+            SubService Get_Sub_Service_By_Id(int id);
 
-        // provider by service
 
-        IEnumerable<Provider> Get_Provider_By_Service(string name);
+        // Category
+
+        string Get_Category(int id);
     }
 }

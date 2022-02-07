@@ -9,7 +9,10 @@ namespace UrbanCompany.API.Repository
     public interface IOrderHistoryRepository
     {
        
-        public void AddToOrderHistory(int orderId , IEnumerable<Cart> cart);
+        public void AddToOrderHistory(IEnumerable<OrderOngoing> orderOngoings);
+        public IEnumerable<OrderDisplay> GetOrderHistory(int cust_id);
+        public bool Order_Complete(int cust_id , IEnumerable<OrderOngoing> orderOngoings);
+
     }
 
 }

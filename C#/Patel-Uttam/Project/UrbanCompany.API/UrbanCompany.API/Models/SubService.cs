@@ -11,6 +11,7 @@ namespace UrbanCompany.API.Models
         {
             Carts = new HashSet<Cart>();
             OrderHistories = new HashSet<OrderHistory>();
+            OrderOngoings = new HashSet<OrderOngoing>();
         }
 
         public int SubServiceId { get; set; }
@@ -18,8 +19,9 @@ namespace UrbanCompany.API.Models
         public int? ServiceId { get; set; }
         public int Cost { get; set; }
 
-        public virtual ServicesCategory Service { get; set; }
+        public virtual Service Service { get; set; }
         public virtual ICollection<Cart> Carts { get; set; }
         public virtual ICollection<OrderHistory> OrderHistories { get; set; }
+        public virtual ICollection<OrderOngoing> OrderOngoings { get; set; }
     }
 }

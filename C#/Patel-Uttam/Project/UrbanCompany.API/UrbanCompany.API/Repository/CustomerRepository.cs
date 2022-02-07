@@ -30,9 +30,9 @@ namespace UrbanCompany.API.Repository
                 }*/
 
 
-        public Customer GetCustomer(int id)
+        public Customer GetCustomer(string user)
         {
-            var selected_customer = context.Customers.FirstOrDefault(c => c.CustomerId == id);
+            var selected_customer = context.Customers.FirstOrDefault(c => c.CustomerName == user);
 
             return selected_customer;
         }
@@ -43,12 +43,25 @@ namespace UrbanCompany.API.Repository
             return context.Customers;
         }
 
-        public Customer UpdateCustomer(Customer customer)
+        public bool UpdateCustomer(int cust_id ,Customer customer)
         {
-            var updated_customer = context.Customers.Attach(customer);
-            updated_customer.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            context.SaveChanges();
-            return customer;
+            if(cust_id == customer.CustomerId)
+            {
+                Customer c = context.Customers.FirstOrDefault(c => c.CustomerId == customer.CustomerId);
+
+                c.CustomerAddress1 = customer.CustomerAddress1;
+                c.CustomerCity = customer.CustomerCity;
+                c.CustomerDistrict = customer.CustomerDistrict;
+
+                context.Customers.Update(c);
+                context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }

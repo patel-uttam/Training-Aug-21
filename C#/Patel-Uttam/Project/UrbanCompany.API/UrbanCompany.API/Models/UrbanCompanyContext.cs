@@ -18,11 +18,13 @@ namespace UrbanCompany.API.Models
         }
 
         public virtual DbSet<Cart> Carts { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderHistory> OrderHistories { get; set; }
+        public virtual DbSet<OrderOngoing> OrderOngoings { get; set; }
         public virtual DbSet<Provider> Providers { get; set; }
-        public virtual DbSet<ServicesCategory> ServicesCategories { get; set; }
+        public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<SubService> SubServices { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -42,28 +44,33 @@ namespace UrbanCompany.API.Models
             {
                 entity.ToTable("Cart");
 
-                entity.Property(e => e.ServiceCategory).HasColumnName("Service_Category");
-
                 entity.HasOne(d => d.CustomerNavigation)
                     .WithMany(p => p.Carts)
                     .HasForeignKey(d => d.Customer)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Cart_Customer");
-
-                entity.HasOne(d => d.ProviderNavigation)
-                    .WithMany(p => p.Carts)
-                    .HasForeignKey(d => d.Provider)
-                    .HasConstraintName("FK_Cart_Provider");
 
                 entity.HasOne(d => d.ServiceNavigation)
                     .WithMany(p => p.Carts)
                     .HasForeignKey(d => d.Service)
-                    .HasConstraintName("FK_Cart_Service");
-
-                entity.HasOne(d => d.ServiceCategoryNavigation)
-                    .WithMany(p => p.Carts)
-                    .HasForeignKey(d => d.ServiceCategory)
                     .HasConstraintName("FK_Cart_Service_category");
+
+                entity.HasOne(d => d.SubServiceNavigation)
+                    .WithMany(p => p.Carts)
+                    .HasForeignKey(d => d.SubService)
+                    .HasConstraintName("FK_Cart_Service");
+            });
+
+            modelBuilder.Entity<Category>(entity =>
+            {
+                entity.ToTable("Category");
+
+                entity.HasIndex(e => e.CategoryName, "Unique_Category")
+                    .IsUnique();
+
+                entity.Property(e => e.CategoryName)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Customer>(entity =>
@@ -93,6 +100,10 @@ namespace UrbanCompany.API.Models
 
             modelBuilder.Entity<Order>(entity =>
             {
+                entity.Property(e => e.OrderStatus)
+                    .HasColumnName("Order_Status")
+                    .HasDefaultValueSql("((0))");
+
                 entity.Property(e => e.TotalCost).HasColumnName("Total_Cost");
 
                 entity.HasOne(d => d.CustomerNavigation)
@@ -105,12 +116,15 @@ namespace UrbanCompany.API.Models
             {
                 entity.ToTable("Order_History");
 
-                entity.Property(e => e.ServiceCategory).HasColumnName("Service_Category");
+                entity.Property(e => e.ServiceDate)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("service_date");
 
                 entity.HasOne(d => d.CustomerNavigation)
                     .WithMany(p => p.OrderHistories)
                     .HasForeignKey(d => d.Customer)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_OrderHistory_Customer");
 
                 entity.HasOne(d => d.Order)
@@ -127,17 +141,68 @@ namespace UrbanCompany.API.Models
                 entity.HasOne(d => d.ServiceNavigation)
                     .WithMany(p => p.OrderHistories)
                     .HasForeignKey(d => d.Service)
-                    .HasConstraintName("FK_OrderHistory_Service");
-
-                entity.HasOne(d => d.ServiceCategoryNavigation)
-                    .WithMany(p => p.OrderHistories)
-                    .HasForeignKey(d => d.ServiceCategory)
                     .HasConstraintName("FK_OrderHistory_Service_category");
+
+                entity.HasOne(d => d.SubServiceNavigation)
+                    .WithMany(p => p.OrderHistories)
+                    .HasForeignKey(d => d.SubService)
+                    .HasConstraintName("FK_OrderHistory_Service");
+            });
+
+            modelBuilder.Entity<OrderOngoing>(entity =>
+            {
+                entity.ToTable("Order_Ongoing");
+
+                entity.Property(e => e.ServiceDate)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("service_date");
+
+                entity.Property(e => e.ServiceTime)
+                    .IsRequired()
+                    .HasMaxLength(5)
+                    .IsUnicode(false)
+                    .HasColumnName("service_time");
+
+                entity.HasOne(d => d.CustomerNavigation)
+                    .WithMany(p => p.OrderOngoings)
+                    .HasForeignKey(d => d.Customer)
+                    .HasConstraintName("FK_OrderOngoing_Customer");
+
+                entity.HasOne(d => d.Order)
+                    .WithMany(p => p.OrderOngoings)
+                    .HasForeignKey(d => d.OrderId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_OrderOngoing_OrderId");
+
+                entity.HasOne(d => d.ProviderNavigation)
+                    .WithMany(p => p.OrderOngoings)
+                    .HasForeignKey(d => d.Provider)
+                    .HasConstraintName("FK_OrderOngoing_Provider");
+
+                entity.HasOne(d => d.ServiceNavigation)
+                    .WithMany(p => p.OrderOngoings)
+                    .HasForeignKey(d => d.Service)
+                    .HasConstraintName("FK_OrderOngoing_Service_category");
+
+                entity.HasOne(d => d.SubServiceNavigation)
+                    .WithMany(p => p.OrderOngoings)
+                    .HasForeignKey(d => d.SubService)
+                    .HasConstraintName("FK_OrderOngoing_Service");
             });
 
             modelBuilder.Entity<Provider>(entity =>
             {
                 entity.ToTable("Provider");
+
+                entity.Property(e => e.FirstName)
+                    .HasMaxLength(25)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LastName)
+                    .HasMaxLength(25)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.ProviderCity)
                     .HasMaxLength(50)
@@ -149,39 +214,40 @@ namespace UrbanCompany.API.Models
 
                 entity.Property(e => e.ProviderEmail).HasMaxLength(256);
 
-                entity.Property(e => e.ProviderName)
+                entity.Property(e => e.ProviderPhone).HasMaxLength(20);
+
+                entity.Property(e => e.UserName)
+                    .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.ProviderPhone).HasMaxLength(20);
-
-                entity.HasOne(d => d.ServiceNavigation)
+                entity.HasOne(d => d.CategoryNavigation)
                     .WithMany(p => p.Providers)
-                    .HasForeignKey(d => d.Service)
+                    .HasForeignKey(d => d.Category)
                     .HasConstraintName("FK_Provider_Service");
             });
 
-            modelBuilder.Entity<ServicesCategory>(entity =>
+            modelBuilder.Entity<Service>(entity =>
             {
-                entity.HasKey(e => e.ServiceId)
-                    .HasName("PK__Services__C51BB00AE09D02D3");
-
-                entity.ToTable("Services_Category");
-
-                entity.HasIndex(e => e.ServiceName, "Service_Unique")
+                entity.HasIndex(e => e.ServiceName, "Unique_Service")
                     .IsUnique();
 
                 entity.Property(e => e.ServiceName)
                     .IsRequired()
                     .HasMaxLength(256)
                     .IsUnicode(false);
+
+                entity.HasOne(d => d.Category)
+                    .WithMany(p => p.Services)
+                    .HasForeignKey(d => d.CategoryId)
+                    .HasConstraintName("Fk_Services_Category");
             });
 
             modelBuilder.Entity<SubService>(entity =>
             {
                 entity.ToTable("Sub_Service");
 
-                entity.HasIndex(e => e.SubServiceName, "SubService_Unique")
+                entity.HasIndex(e => e.SubServiceName, "Unique_SubService")
                     .IsUnique();
 
                 entity.Property(e => e.SubServiceName)

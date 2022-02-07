@@ -9,8 +9,8 @@ namespace UrbanCompany.API.Repository
     public interface ICustomerRepository
     {
         IEnumerable<Customer> GetCustomers();
-        Customer GetCustomer(int id);
-        Customer UpdateCustomer(Customer customer);
+        Customer GetCustomer(string user);
+        bool UpdateCustomer(int cust_id , Customer customer);
 
         //void DeleteCustomer(string name);
 

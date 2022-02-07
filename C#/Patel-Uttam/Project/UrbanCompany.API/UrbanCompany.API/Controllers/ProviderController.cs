@@ -24,9 +24,9 @@ namespace UrbanCompany.API.Controllers
         }
 
 
+        // Get Method to Get Collection Records of providers (Admin has Authority)
 
-        // GET: api/<CustomerController>
-        [Authorize(Roles = Roles.Provider)]
+        [Authorize(Roles = Roles.Admin)]
         [HttpGet]
         public IEnumerable<Provider> Get()
         {
@@ -34,37 +34,40 @@ namespace UrbanCompany.API.Controllers
 
         }
 
-        // GET api/<CustomerController>/5
+        // GET Method to Get Customer Record 
+
         [Authorize(Roles = Roles.Provider)]
         [HttpGet("{name}")]
-        public Provider Get(int id)
+        public Provider Get(string name)
         {
-            return provider_repocsitory.GetProvider(id);
+            return provider_repocsitory.GetProvider(name);
         }
 
-        /*        // POST api/<CustomerController>
-                [HttpPost]
-                public void Post([FromBody] string value)
-                {
-                }*/
-
-        // PUT api/<CustomerController>/5
-        [Authorize(Roles = Roles.Provider)]
-        [HttpPut("{name}")]
-        public void Put(string name, [FromBody] Provider provider)
+        [HttpGet("{id}/{city}")]
+        public IEnumerable<Provider> Get(int id,string city)
         {
-            if (provider.ProviderName == name)
+            return provider_repocsitory.GetProviderByCategory_City(id,city);
+        }
+
+        [HttpGet("category/{city}/{dist}")]
+        public IEnumerable<string> Get(string city , string dist)
+        {
+            return provider_repocsitory.GetCategory(dist);
+        }
+
+
+        // Put Method to Update Provider Record
+
+        [Authorize(Roles = Roles.Provider)]
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] Provider provider)
+        {
+            if (provider.ProviderId == id)
             {
                 provider_repocsitory.UpdateProvider(provider);
             }
         }
 
-/*        // DELETE api/<CustomerController>/5
-        [Authorize(Roles = Roles.Provider)]
-        [HttpDelete("{name}")]
-        public void Delete(string name)
-        {
-            provider_repocsitory.DeleteProvider(name);
-        }*/
+
     }
 }

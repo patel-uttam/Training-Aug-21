@@ -21,38 +21,13 @@ namespace UrbanCompany.API.Controllers
         {
             providerRepository = repository;
         }
-        // GET: api/<DisplayProviderController>
-        /*[HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }*/
 
         // GET api/<DisplayProviderController>/5
 
-        [HttpGet("{name}")]
-        public IEnumerable<Provider> Get(string name)
+        [HttpGet("{id}/{name}")]
+        public IEnumerable<Provider> Get(int id,string name)
         {
-            return providerRepository.GetProviderByService(name);
+            return providerRepository.GetProviderByCategory_City(id,name);
         }
-
-
-/*        // POST api/<DisplayProviderController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<DisplayProviderController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<DisplayProviderController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }*/
     }
 }

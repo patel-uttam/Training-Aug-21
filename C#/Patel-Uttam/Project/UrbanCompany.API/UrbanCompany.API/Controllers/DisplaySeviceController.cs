@@ -11,9 +11,9 @@ using UrbanCompany.API.Repository;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace UrbanCompany.API.Controllers
-
+     
 {
-    [Route("api/services")]
+    [Route("api")]
     [ApiController]
     public class DisplaySeviceController : ControllerBase
     {
@@ -24,29 +24,24 @@ namespace UrbanCompany.API.Controllers
             servicesRepository = display;
         }
 
-        // GET: api/<DisplaySeviceController>
-        [Authorize(Roles =Roles.User)]
-        [HttpGet]
-        public IEnumerable<ServicesCategory> Get()
+        [HttpGet("{id}/category")]
+        public string Get(int id,int id1)
         {
-            return servicesRepository.Get_Service_Category();
+            return servicesRepository.Get_Category(id);
         }
 
-        // GET api/<DisplaySeviceController>/5
-        [Authorize(Roles = Roles.User)]
-        [HttpGet("{name}")]
-        public IEnumerable<SubService> Get(string name)
+        [HttpGet("{id}/service")]
+        public Service Get(int id)
         {
-            return servicesRepository.Get_Sub_Service(name);
+            return servicesRepository.Get_Service_By_Id(id);
         }
 
 
-/*        [Authorize(Roles = Roles.User)]
-        [HttpGet("provider/{name}")]
-
-        public IEnumerable<Provider> Get(string name)
+        [HttpGet("{name}/services")]
+        public IEnumerable<Service> Get(string name)
         {
-            return servicesRepository.Get_Provider_By_Service(name);
-        }*/
+            return servicesRepository.Get_Service(name);
+        }
+
     }
 }

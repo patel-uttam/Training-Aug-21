@@ -34,7 +34,13 @@ namespace UrbanCompany.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddControllers();
+
+            // to handle  ThrowInvalidOperationException_SerializerCycleDetected
+            services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+
             services.AddDbContext<AuthenticationContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("conn")));
             services.AddDbContext<UrbanCompanyContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("conn")));
 
@@ -61,6 +67,14 @@ namespace UrbanCompany.API
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
                 }; 
             });
+
+            services.AddCors(options => 
+            {
+                options.AddPolicy("EnableCORS", builder => 
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
         }
 
 
@@ -71,6 +85,9 @@ namespace UrbanCompany.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseHttpsRedirection();
+
+            app.UseCors("EnableCORS");
 
             app.UseRouting();
 

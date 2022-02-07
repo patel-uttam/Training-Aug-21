@@ -9,11 +9,9 @@ using UrbanCompany.API.Authentication;
 using UrbanCompany.API.Repository;
 
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace UrbanCompany.API.Controllers
 {
-    [Route("api/customer/order")]
+    [Route("api/customer")]
     [ApiController]
     public class OrderController : ControllerBase
     {
@@ -23,23 +21,30 @@ namespace UrbanCompany.API.Controllers
         public OrderController(IOrderRepository order )
         {
             orderRepository = order;
-
         }
 
-        // GET api/<OrderController>/5
-        [Authorize(Roles = Roles.User)]
-        [HttpGet("history/{id}")]
-        public IEnumerable<OrderHistory> Get(int id)
+        [Authorize(Roles = Roles.Customer)]
+        [HttpGet("{cust_id}/order/ongoing")]
+        public IEnumerable<OrderDisplay> Get(int cust_id)
         {
-            return orderRepository.GetOrderHistory(id);
+            return orderRepository.GetOrderOngoing(cust_id);
         }
 
-        // POST api/<OrderController>
-        [Authorize(Roles = Roles.User)]
-        [HttpPost("{id}")]
-        public Order Post(int id, [FromBody] IEnumerable<Cart> carts)
+
+        // To Make Order for Customr (Take param in  Collection type of  Cart).
+
+        [Authorize(Roles = Roles.Customer)]
+        [HttpPost("{id}/orderservice/{date}/{time}/{c_fee}")]
+        public bool Post(int id, string date , string time, int c_fee, [FromBody] IEnumerable<CartDisplay> carts)
         {
-            return orderRepository.Make_Order(id, carts);
+            
+            string s = "2022-02-05";
+
+            DateTime D = DateTime.Parse(s);
+            Console.Write(D);
+
+            return orderRepository.Make_Order(id, carts, date, time,c_fee);
+            
         }
 
     }
